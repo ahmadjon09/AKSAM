@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Product" ADD COLUMN     "specsEn" JSONB NOT NULL DEFAULT '[]',
+ADD COLUMN     "specsRu" JSONB NOT NULL DEFAULT '[]',
+ADD COLUMN     "specsUz" JSONB NOT NULL DEFAULT '[]';

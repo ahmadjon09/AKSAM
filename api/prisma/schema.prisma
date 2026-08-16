@@ -1,0 +1,155 @@
+// AKSAM core schema. All product/category copy is stored per locale (uz/ru/en),
+// so the API returns everything the storefront needs in a single request.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  SUPERADMIN
+  ADMIN
+  EDITOR
+}
+
+enum LeadSource {
+  ORDER
+  CONTACT
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  CLOSED
+  SPAM
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  fullName     String
+  role         Role     @default(EDITOR)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  refreshTokens RefreshToken[]
+}
+
+// Rotating refresh tokens; the hash is stored, never the raw token.
+model RefreshToken {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique
+  expiresAt DateTime
+  revokedAt DateTime?
+  replacedBy String?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}
+
+model Category {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  nameUz    String
+  nameRu    String
+  nameEn    String
+  descUz    String    @default("")
+  descRu    String    @default("")
+  descEn    String    @default("")
+  image     String?
+  isActive  Boolean   @default(true)
+  sortOrder Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  products  Product[]
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  categoryId   String
+  category     Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  nameUz       String
+  nameRu       String
+  nameEn       String
+  shortUz      String   @default("")
+  shortRu      String   @default("")
+  shortEn      String   @default("")
+  descUz       String   @default("")
+  descRu       String   @default("")
+  descEn       String   @default("")
+  metaTitleUz  String   @default("")
+  metaTitleRu  String   @default("")
+  metaTitleEn  String   @default("")
+  metaDescUz   String   @default("")
+  metaDescRu   String   @default("")
+  metaDescEn   String   @default("")
+  highlightsUz Json     @default("[]")
+  highlightsRu Json     @default("[]")
+  highlightsEn Json     @default("[]")
+  specsUz      Json     @default("[]")
+  specsRu      Json     @default("[]")
+  specsEn      Json     @default("[]")
+  images       Json     @default("[]")
+  isActive     Boolean  @default(true)
+  sortOrder    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([categoryId, isActive])
+  @@index([sortOrder])
+}
+
+model Lead {
+  id          String     @id @default(cuid())
+  source      LeadSource @default(ORDER)
+  fullName    String
+  phone       String
+  message     String?
+  productSlug String?
+  productName String?
+  lang        String?
+  status      LeadStatus @default(NEW)
+  note        String?
+  createdAt   DateTime   @default(now())
+
+  @@index([status, createdAt])
+}
+
+// Single-row site settings (id is always 1).
+model Settings {
+  id          Int      @id @default(1)
+  siteName    String   @default("AKSAM")
+  tagline     String   @default("")
+  phone       String   @default("")
+  phone2      String   @default("")
+  email       String   @default("")
+  address     String   @default("")
+  workHours   String   @default("")
+  mapLat      Float    @default(41.0249587)
+  mapLng      Float    @default(71.557402)
+  mapLabel    String   @default("")
+  instagram   String   @default("")
+  telegram    String   @default("")
+  facebook    String   @default("")
+  updatedAt   DateTime @updatedAt
+}
+
+// Daily visitor aggregates, deduplicated by anonymous visitor token.
+model VisitorDay {
+  id        String   @id @default(cuid())
+  day       String
+  tokenHash String
+  views     Int      @default(1)
+  updatedAt DateTime @updatedAt
+
+  @@unique([day, tokenHash])
+  @@index([day])
+}

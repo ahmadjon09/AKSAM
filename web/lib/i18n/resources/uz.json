@@ -1,0 +1,364 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "products": "Mahsulotlar",
+    "about": "Kompaniya",
+    "locations": "Manzil",
+    "contact": "Aloqa",
+    "order": "Buyurtma berish",
+    "terms": "Xizmat ko'rsatish shartlari"
+  },
+  "common": {
+    "send": "Yuborish",
+    "sending": "Yuborilmoqda",
+    "learnMore": "Batafsil",
+    "viewAll": "Barchasini ko'rish",
+    "all": "Barchasi",
+    "search": "Qidirish",
+    "close": "Yopish",
+    "menu": "Menyu",
+    "openMenu": "Menyuni ochish",
+    "back": "Orqaga",
+    "retry": "Qayta urinish",
+    "loading": "Yuklanmoqda",
+    "of": "/",
+    "results": "ta mahsulot",
+    "yes": "Ha",
+    "no": "Yo'q"
+  },
+  "hero": {
+    "eyebrow": "Ishlab chiqarish - 2020-yildan beri",
+    "titleLine1": "To'qilgan sifat,",
+    "titleAccent": "har bir metrda",
+    "subtitle": "Namangandagi ishlab chiqarish majmuamizda lentalar, elastik tasmalar va brend yorliqlarini Yevropa uskunalarida, ISO nazorati ostida ishlab chiqaramiz.",
+    "ctaPrimary": "Buyurtma berish",
+    "ctaSecondary": "Mahsulotlarni ko'rish",
+    "scroll": "Pastga suring",
+    "stats": [
+      {
+        "value": "6+",
+        "label": "yillik tajriba"
+      },
+      {
+        "value": "1200+",
+        "label": "bajarilgan buyurtma"
+      },
+      {
+        "value": "46+",
+        "label": "doimiy mijoz"
+      },
+      {
+        "value": "99.8%",
+        "label": "sifat kafolati"
+      }
+    ]
+  },
+  "marquee": {
+    "items": [
+      "Lentalar",
+      "Elastik tasmalar",
+      "Yorliqlar va etiketkalar",
+      "ISO sifat nazorati",
+      "5–20 ish kuni",
+      "Butun O'zbekiston bo'ylab yetkazib berish"
+    ]
+  },
+  "categories": {
+    "eyebrow": "Mahsulot yo'nalishlari",
+    "title": "Biz nima ishlab chiqaramiz",
+    "subtitle": "Uch asosiy yo'nalish - yagona ishlab chiqarish quvvati. Har birida individual buyurtma ham, ommaviy partiyalar ham mavjud.",
+    "explore": "Yo'nalishni ko'rish",
+    "productsCount": "ta mahsulot"
+  },
+  "featured": {
+    "eyebrow": "Tanlangan mahsulotlar",
+    "title": "Eng ko'p buyurtma qilinadiganlar",
+    "subtitle": "Kiyim-kechak korxonalari va brendlar bizga qayta-qayta murojaat qiladigan mahsulotlar."
+  },
+  "story": {
+    "eyebrow": "Brend haqida",
+    "title": "Namangan - sifatning manzili",
+    "p1": "AKSAM 2020-yilda kichik to'quv ustaxonasi sifatida ish boshlagan. Bugun bu - zamonaviy Yevropa uskunalari bilan jihozlangan, butun O'zbekiston bo'ylab kiyim-kechak korxonalari va brendlarini ta'minlaydigan ishlab chiqarish majmuasi.",
+    "p2": "Tamoyilimiz oddiy: har bir partiya ISO standartlari bo'yicha nazorat qilinadi, har bir buyurtma o'z vaqtida bajariladi. Shuning uchun mijozlarning 99,8 foizi bizga qayta-qayta murojaat qiladi.",
+    "link": "Kompaniya haqida batafsil"
+  },
+  "process": {
+    "eyebrow": "Ish tartibi",
+    "title": "To'rt qadamda hamkorlik",
+    "subtitle": "Arizadan tayyor mahsulotgacha - jarayon shaffof va tushunarli.",
+    "steps": [
+      {
+        "title": "Ariza / Bog'lanish",
+        "text": "Telefon, Telegram yoki veb-sayt orqali murojaat qiling"
+      },
+      {
+        "title": "Talabni aniqlash",
+        "text": "Mahsulot turi, o'lcham, rang va miqdor birgalikda kelishiladi"
+      },
+      {
+        "title": "Namuna va dizayn",
+        "text": "Namuna tayyorlab taqdim etamiz va birgalikda tasdiqlaymiz"
+      },
+      {
+        "title": "Ishlab chiqarish",
+        "text": "Zamonaviy Yevropa jihozlarida sifatli ishlab chiqarish va yetkazib berish"
+      }
+    ]
+  },
+  "craft": {
+    "eyebrow": "Sifat standartlari",
+    "title": "Har bir partiyada nazorat",
+    "subtitle": "Xomashyodan tayyor mahsulotgacha - to'rt bosqichli kafolat tizimi.",
+    "items": [
+      {
+        "title": "Yevropa uskunalari",
+        "text": "To'quv va ishlov berish jarayonlari zamonaviy Yevropa dastgohlarida bajariladi"
+      },
+      {
+        "title": "ISO sifat nazorati",
+        "text": "Xomashyodan tayyor mahsulotgacha har bir bosqich tekshiruvdan o'tadi"
+      },
+      {
+        "title": "Aniq muddatlar",
+        "text": "Buyurtma hajmiga qarab 5–20 ish kuni ichida ishlab chiqaramiz"
+      },
+      {
+        "title": "Butun O'zbekiston",
+        "text": "Namangandan respublikaning istalgan hududiga yetkazib beramiz"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Mijozlar fikri",
+    "title": "Biz bilan ishlash oson",
+    "subtitle": "Ishonchli hamkorlik - eng yaxshi tavsiya.",
+    "quotes": [
+      {
+        "text": "AKSAM bilan 3 yildan ortiq hamkorlik qilamiz. Sifat va muddatlarni hech qachon buzishmagan.",
+        "name": "Shavkat Nurmatov",
+        "company": "TexnoTextile MChJ"
+      },
+      {
+        "text": "Elastik tasmalar va yorliqlar buyurtmasini professional darajada tayyorlashdi. Juda mamnunmiz.",
+        "name": "Madina Akbarova",
+        "company": "Elegant Fashion"
+      },
+      {
+        "text": "Katta hajmdagi buyurtmalarni ham qisqa muddatda va yuqori sifatda yetkazib berishadi.",
+        "name": "Rustam Xolmatov",
+        "company": "UzTextile Group"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Biznesingizni yangi bosqichga olib chiqing",
+    "subtitle": "Sifatli mahsulotlar va ishonchli hamkorlik - birinchi qadam bugun.",
+    "button": "Hoziroq murojaat qiling"
+  },
+  "footer": {
+    "tagline": "Namangandagi ishlab chiqarish majmuasi. Lentalar, elastik tasmalar va yorliqlar - Yevropa uskunalarida, ISO nazorati ostida.",
+    "navTitle": "Sayt",
+    "productsTitle": "Mahsulotlar",
+    "contactsTitle": "Aloqa",
+    "hoursTitle": "Ish vaqti",
+    "rights": "Barcha huquqlar himoyalangan",
+    "backToTop": "Yuqoriga"
+  },
+  "catalog": {
+    "title": "Mahsulotlar katalogi",
+    "subtitle": "Narxlar har bir buyurtma uchun individual kelishiladi - sifat standartlari esa hamma uchun bir xil. Kerakli mahsulotni tanlang, qisqa muddatda javob beramiz.",
+    "filters": "Kategoriya",
+    "searchPlaceholder": "Mahsulot qidirish…",
+    "resultsTitle": "Natijalar",
+    "empty": "Hech narsa topilmadi. Filtrlarni o'zgartirib ko'ring.",
+    "clearFilters": "Filtrlarni tozalash",
+    "noPrice": "Narx buyurtma asosida",
+    "order": "Buyurtma berish"
+  },
+  "product": {
+    "breadcrumbHome": "Bosh sahifa",
+    "breadcrumbCatalog": "Katalog",
+    "orderTitle": "Buyurtma berish",
+    "orderSubtitle": "Ismingiz va telefon raqamingizni qoldiring - mutaxassisimiz qisqa muddatda bog'lanadi.",
+    "highlightsTitle": "Sifat xususiyatlari",
+    "descriptionTitle": "Tavsif",
+    "relatedTitle": "O'xshash mahsulotlar",
+    "backToCatalog": "Katalogga qaytish",
+    "notFound": "Mahsulot topilmadi",
+    "qualityNote": "Narx va muddatlar har bir buyurtma uchun individual kelishiladi",
+    "imagesCount": "ta rasm",
+    "specsTitle": "Texnik ko'rsatkichlar",
+    "processTitle": "Ishlab chiqarish jarayoni",
+    "deliveryTitle": "Yetkazib berish va to'lov",
+    "deliveryText": "Buyurtmalarni O'zbekistonning barcha viloyatlariga logistika hamkorlarimiz orqali yetkazib beramiz. To'lov shartlari va yetkazib berish muddatlari har bir buyurtma uchun individual kelishiladi."
+  },
+  "orderForm": {
+    "title": "Buyurtma berish",
+    "subtitle": "Mutaxassisimiz qisqa muddatda siz bilan bog'lanadi",
+    "name": "Ismingiz",
+    "namePlaceholder": "Masalan: Aziz Karimov",
+    "phone": "Telefon raqamingiz",
+    "phonePlaceholder": "+998 90 123 45 67",
+    "message": "Xabar (ixtiyoriy)",
+    "messagePlaceholder": "Mahsulot haqida savollaringiz…",
+    "submit": "Arizani yuborish",
+    "nameError": "Iltimos, ismingizni kiriting",
+    "phoneError": "Telefon raqamni to'g'ri kiriting",
+    "successTitle": "Arizangiz qabul qilindi",
+    "successText": "Mutaxassisimiz tez orada siz bilan bog'lanadi.",
+    "privacy": "Ma'lumotlaringiz faqat buyurtmani qayta ishlash uchun ishlatiladi va uchinchi shaxslarga berilmaydi.",
+    "productLabel": "Mahsulot"
+  },
+  "about": {
+    "heroEyebrow": "Kompaniya haqida",
+    "heroTitle": "Sifat - bizning birinchi tilimiz",
+    "heroText": "AKSAM 2020-yildan buyon O'zbekiston kiyim-kechak sanoatini sifatli lentalar, elastik tasmalar va yorliqlar bilan ta'minlab kelmoqda.",
+    "valuesEyebrow": "Qadriyatlar",
+    "valuesTitle": "Bizni biz qiladigan tamoyillar",
+    "values": [
+      {
+        "title": "Sifat",
+        "text": "Har bir metrda - ISO nazorati va halol xomashyo"
+      },
+      {
+        "title": "Aniqlik",
+        "text": "Kelishilgan muddat - qat'iy bajariladigan va'da"
+      },
+      {
+        "title": "Hamkorlik",
+        "text": "Kichik ustaxonadan yirik fabrikagacha - har bir mijoz muhim"
+      },
+      {
+        "title": "Mas'uliyat",
+        "text": "Ishlab chiqarishdan yetkazib berishgacha to'liq javobgarlik"
+      }
+    ],
+    "teamEyebrow": "Jamoa",
+    "teamTitle": "Mutaxassislar jamoasi",
+    "team": [
+      {
+        "name": "Alisher Karimov",
+        "role": "Direktor / Asoschi",
+        "desc": "Umumiy boshqaruv va strategiya"
+      },
+      {
+        "name": "Dilshod Rahimov",
+        "role": "Ishlab chiqarish bo'limi boshlig'i",
+        "desc": "Texnologik jarayonlar nazorati"
+      },
+      {
+        "name": "Nilufar Azimova",
+        "role": "Sifat nazorati bo'limi",
+        "desc": "Mahsulot sifati va standartlar"
+      }
+    ],
+    "numbersEyebrow": "Raqamlarda",
+    "numbersTitle": "Ishonch - o'lchanadigan qiymat"
+  },
+  "contact": {
+    "title": "Aloqa",
+    "subtitle": "Savolingiz bormi? Qo'ng'iroq qiling, yozing yoki sayt orqali ariza qoldiring - qisqa muddatda javob beramiz.",
+    "formTitle": "Xabar qoldiring",
+    "formSubtitle": "Ish kunida 1 soat ichida javob beramiz.",
+    "infoTitle": "Aloqa ma'lumotlari",
+    "phoneLabel": "Telefon",
+    "phoneNote": "Har kuni 24/7 qabul qilamiz",
+    "emailLabel": "Elektron pochta",
+    "emailNote": "Tez javob beramiz",
+    "addressLabel": "Manzil",
+    "hoursLabel": "Ish vaqti",
+    "mapTitle": "Xaritada",
+    "telegramLabel": "Telegram"
+  },
+  "locations": {
+    "title": "Manzilimiz",
+    "subtitle": "Namangandagi ishlab chiqarish majmuasi - shu yerdan butun O'zbekiston bo'ylab jo'natamiz.",
+    "addressTitle": "Ishlab chiqarish va ofis",
+    "addressNote": "Kelishdan oldin qo'ng'iroq qiling - kerakli namunalarni tayyorlab qo'yamiz.",
+    "deliveryTitle": "Yetkazib berish",
+    "deliveryText": "Buyurtmalarni O'zbekistonning barcha viloyatlariga logistika hamkorlarimiz orqali yetkazib beramiz. Yirik partiyalar uchun yetkazib berish shartlari individual kelishiladi.",
+    "regionsTitle": "Yetkazib berish hududlari",
+    "regions": [
+      "Toshkent",
+      "Namangan",
+      "Andijon",
+      "Farg'ona",
+      "Samarqand",
+      "Buxoro",
+      "Qashqadaryo",
+      "Surxondaryo",
+      "Xorazm",
+      "Qoraqalpog'iston"
+    ],
+    "howTitle": "Qanday yetib borish mumkin",
+    "howItems": [
+      {
+        "title": "Mashinada",
+        "text": "Namangan shahri, Yangi Namangan tumani, Go'zal ko'chasi - «Orzu» kichik sanoat zonasi"
+      },
+      {
+        "title": "Telefon orqali",
+        "text": "Qo'ng'iroq qiling - manzilni xarita havolasi bilan jo'natamiz"
+      },
+      {
+        "title": "Telegram orqali",
+        "text": "Yozing - geolokatsiyani darhol jo'natamiz"
+      }
+    ],
+    "openInMaps": "Google Maps'da ochish"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "text": "Bu sahifa mavjud emas yoki ko'chirilgan.",
+    "button": "Bosh sahifaga qaytish"
+  },
+  "errors": {
+    "generic": "Nimadir xato ketdi. Iltimos, qayta urinib ko'ring.",
+    "network": "Server bilan bog'lanib bo'lmadi. Internet aloqangizni tekshiring.",
+    "rateLimited": "So'rovlar juda ko'p. Biroz kuting va qayta urinib ko'ring."
+  },
+  "seo": {
+    "home": {
+      "title": "AKSAM - lentalar, elastik tasmalar va yorliqlar ishlab chiqaruvchisi | Namangan, O'zbekiston",
+      "description": "AKSAM - 2020-yildan beri Namanganda lentalar, elastik tasmalar va brend yorliqlarini ishlab chiqaruvchi kompaniya. Yevropa uskunalari, ISO sifat nazorati, butun O'zbekiston bo'ylab yetkazib berish."
+    },
+    "products": {
+      "title": "Mahsulotlar katalogi - lentalar, elastik tasmalar, yorliqlar | AKSAM",
+      "description": "AKSAM mahsulotlari: atlas, rep, jakkard va organza lentalar, to'qilgan va trikotaj elastik tasmalar, to'qilgan va osma yorliqlar. Individual buyurtma, 5–20 ish kuni."
+    },
+    "about": {
+      "title": "Kompaniya haqida - AKSAM, Namangan",
+      "description": "AKSAM tarixi, qadriyatlari va jamoasi. 2020-yildan beri O'zbekiston bozorida - Yevropa uskunalari va ISO sifat nazorati bilan."
+    },
+    "contact": {
+      "title": "Aloqa - AKSAM, Namangan",
+      "description": "AKSAM bilan bog'laning: telefon, Telegram, elektron pochta yoki sayt orqali ariza. Manzil: Namangan sh., Yangi Namangan tumani."
+    },
+    "locations": {
+      "title": "Manzil va yetkazib berish - AKSAM",
+      "description": "AKSAM ishlab chiqarish majmuasi manzili: Namangan sh., Yangi Namangan tumani, Go'zal ko'chasi, 3-uy. Butun O'zbekiston bo'ylab yetkazib berish."
+    },
+    "default": {
+      "title": "AKSAM - lentalar, elastik tasmalar va yorliqlar | Namangan, O'zbekiston",
+      "description": "AKSAM ishlab chiqarish majmuasi - Namangandan butun O'zbekistonga sifatli lentalar, elastik tasmalar va yorliqlar."
+    },
+    "terms": {
+      "title": "Xizmat ko'rsatish shartlari - AKSAM",
+      "description": "AKSAM veb-saytidan foydalanish va buyurtma berish shartlari: buyurtma tartibi, narxlar, yetkazib berish, maxfiylik va javobgarlik."
+    }
+  },
+  "faq": {
+    "eyebrow": "Ko'p so'raladigan savollar",
+    "title": "Savollaringizga javoblar",
+    "subtitle": "Buyurtma berishdan oldin eng ko'p so'raladigan savollar."
+  },
+  "gallery": {
+    "eyebrow": "Ishlab chiqarishdan kadrlar",
+    "title": "Sex ichidan lavhalar",
+    "subtitle": "Zamonaviy ishlab chiqarish jarayonimiz, mahsulotlarimiz va jamoamiz bilan tanishing."
+  },
+  "terms": {
+    "title": "Xizmat ko'rsatish shartlari",
+    "updated": "Oxirgi yangilanish: 2026-yil avgust. Savollar bo'yicha: +998 91 183 80 08."
+  }
+}

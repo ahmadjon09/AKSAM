@@ -1,0 +1,364 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "Company",
+    "locations": "Location",
+    "contact": "Contact",
+    "order": "Place an order",
+    "terms": "Terms of Service"
+  },
+  "common": {
+    "send": "Send",
+    "sending": "Sending…",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "all": "All",
+    "search": "Search",
+    "close": "Close",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "back": "Back",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "of": "/",
+    "results": "products",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "hero": {
+    "eyebrow": "Manufacturing since 2020",
+    "titleLine1": "Quality woven into",
+    "titleAccent": "every metre",
+    "subtitle": "At our production complex in Namangan we manufacture ribbons, elastic tapes and brand labels on European equipment under ISO quality control.",
+    "ctaPrimary": "Place an order",
+    "ctaSecondary": "Browse products",
+    "scroll": "Scroll down",
+    "stats": [
+      {
+        "value": "6+",
+        "label": "years of experience"
+      },
+      {
+        "value": "1200+",
+        "label": "orders completed"
+      },
+      {
+        "value": "46+",
+        "label": "regular clients"
+      },
+      {
+        "value": "99.8%",
+        "label": "quality guarantee"
+      }
+    ]
+  },
+  "marquee": {
+    "items": [
+      "Ribbons",
+      "Elastic tapes",
+      "Labels and tags",
+      "ISO quality control",
+      "5–20 working days",
+      "Delivery across Uzbekistan"
+    ]
+  },
+  "categories": {
+    "eyebrow": "Product lines",
+    "title": "What we manufacture",
+    "subtitle": "Three core lines on a single production base. Each one supports both fully custom orders and bulk runs.",
+    "explore": "Explore the line",
+    "productsCount": "products"
+  },
+  "featured": {
+    "eyebrow": "Featured products",
+    "title": "The most ordered items",
+    "subtitle": "The products garment manufacturers and brands keep coming back for."
+  },
+  "story": {
+    "eyebrow": "About the brand",
+    "title": "Namangan - the address of quality",
+    "p1": "AKSAM began in 2020 as a small weaving workshop. Today it is a production complex with modern European equipment, supplying garment manufacturers and brands across Uzbekistan.",
+    "p2": "Our principle is simple: every batch passes ISO-standard inspection and every order ships on time. That is why 99.8% of our clients come back.",
+    "link": "More about the company"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "Partnership in four steps",
+    "subtitle": "From enquiry to finished product - a transparent, straightforward process.",
+    "steps": [
+      {
+        "title": "Enquiry / Contact",
+        "text": "Reach us by phone, Telegram or through the website"
+      },
+      {
+        "title": "Requirements",
+        "text": "We agree on product type, size, colour and quantity"
+      },
+      {
+        "title": "Sample and design",
+        "text": "We prepare a sample, show it to you and approve it together"
+      },
+      {
+        "title": "Production",
+        "text": "Quality manufacturing and delivery on modern European equipment"
+      }
+    ]
+  },
+  "craft": {
+    "eyebrow": "Quality standards",
+    "title": "Control in every batch",
+    "subtitle": "From raw material to finished product - a four-level guarantee system.",
+    "items": [
+      {
+        "title": "European equipment",
+        "text": "Weaving and finishing are performed on modern European machinery"
+      },
+      {
+        "title": "ISO quality control",
+        "text": "Every stage, from raw material to finished product, is inspected"
+      },
+      {
+        "title": "Exact lead times",
+        "text": "Production within 5–20 working days depending on order volume"
+      },
+      {
+        "title": "All of Uzbekistan",
+        "text": "Delivery from Namangan to any region of the country"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Client feedback",
+    "title": "Working with us is easy",
+    "subtitle": "Reliable partnership is the best recommendation.",
+    "quotes": [
+      {
+        "text": "We have worked with AKSAM for over three years. They have never missed a deadline or a quality bar.",
+        "name": "Shavkat Nurmatov",
+        "company": "TexnoTextile LLC"
+      },
+      {
+        "text": "Our order of elastic tapes and labels was completed to a professional standard. Very satisfied.",
+        "name": "Madina Akbarova",
+        "company": "Elegant Fashion"
+      },
+      {
+        "text": "Even large volumes are delivered quickly and to a high standard.",
+        "name": "Rustam Kholmatov",
+        "company": "UzTextile Group"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Take your business to the next level",
+    "subtitle": "Quality products and a reliable partnership - the first step is today.",
+    "button": "Contact us now"
+  },
+  "footer": {
+    "tagline": "Production complex in Namangan. Ribbons, elastic tapes and labels - on European equipment, under ISO control.",
+    "navTitle": "Site",
+    "productsTitle": "Products",
+    "contactsTitle": "Contact",
+    "hoursTitle": "Working hours",
+    "rights": "All rights reserved",
+    "backToTop": "Back to top"
+  },
+  "catalog": {
+    "title": "Product catalogue",
+    "subtitle": "Prices are agreed individually for every order, while quality standards are the same for everyone. Pick the product you need and we will respond shortly.",
+    "filters": "Category",
+    "searchPlaceholder": "Search products…",
+    "resultsTitle": "Results",
+    "empty": "Nothing found. Try adjusting the filters.",
+    "clearFilters": "Clear filters",
+    "noPrice": "Price on request",
+    "order": "Place an order"
+  },
+  "product": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCatalog": "Catalogue",
+    "orderTitle": "Place an order",
+    "orderSubtitle": "Leave your name and phone number - our specialist will contact you shortly.",
+    "highlightsTitle": "Quality highlights",
+    "descriptionTitle": "Description",
+    "relatedTitle": "Related products",
+    "backToCatalog": "Back to catalogue",
+    "notFound": "Product not found",
+    "qualityNote": "Price and lead times are agreed individually for every order",
+    "imagesCount": "images",
+    "specsTitle": "Technical specifications",
+    "processTitle": "Production process",
+    "deliveryTitle": "Delivery and payment",
+    "deliveryText": "We deliver orders to every region of Uzbekistan through our logistics partners. Payment terms and delivery times are agreed individually for each order."
+  },
+  "orderForm": {
+    "title": "Place an order",
+    "subtitle": "Our specialist will contact you shortly",
+    "name": "Your name",
+    "namePlaceholder": "e.g. Aziz Karimov",
+    "phone": "Phone number",
+    "phonePlaceholder": "+998 90 123 45 67",
+    "message": "Message (optional)",
+    "messagePlaceholder": "Your questions about the product…",
+    "submit": "Submit the request",
+    "nameError": "Please enter your name",
+    "phoneError": "Please enter a valid phone number",
+    "successTitle": "Your request has been received",
+    "successText": "Our specialist will contact you shortly.",
+    "privacy": "Your details are used only to process the request and are never shared with third parties.",
+    "productLabel": "Product"
+  },
+  "about": {
+    "heroEyebrow": "About the company",
+    "heroTitle": "Quality is our first language",
+    "heroText": "Since 2020, AKSAM has supplied Uzbekistan's garment industry with quality ribbons, elastic tapes and labels.",
+    "valuesEyebrow": "Values",
+    "valuesTitle": "The principles that make us who we are",
+    "values": [
+      {
+        "title": "Quality",
+        "text": "ISO inspection and honest raw materials in every metre"
+      },
+      {
+        "title": "Precision",
+        "text": "An agreed deadline is a commitment we keep"
+      },
+      {
+        "title": "Partnership",
+        "text": "From a small workshop to a large factory - every client matters"
+      },
+      {
+        "title": "Responsibility",
+        "text": "Full accountability from production to delivery"
+      }
+    ],
+    "teamEyebrow": "Team",
+    "teamTitle": "Our specialists",
+    "team": [
+      {
+        "name": "Alisher Karimov",
+        "role": "Director / Founder",
+        "desc": "Overall management and strategy"
+      },
+      {
+        "name": "Dilshod Rahimov",
+        "role": "Head of production",
+        "desc": "Control of manufacturing processes"
+      },
+      {
+        "name": "Nilufar Azimova",
+        "role": "Quality control",
+        "desc": "Product quality and standards"
+      }
+    ],
+    "numbersEyebrow": "In numbers",
+    "numbersTitle": "Trust is measurable"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a question? Call, write or leave a request on the website - we will respond shortly.",
+    "formTitle": "Leave a message",
+    "formSubtitle": "We reply within 1 hour on working days.",
+    "infoTitle": "Contact details",
+    "phoneLabel": "Phone",
+    "phoneNote": "Available 24/7",
+    "emailLabel": "Email",
+    "emailNote": "Quick replies",
+    "addressLabel": "Address",
+    "hoursLabel": "Working hours",
+    "mapTitle": "On the map",
+    "telegramLabel": "Telegram"
+  },
+  "locations": {
+    "title": "Our location",
+    "subtitle": "The production complex in Namangan - the place we ship from to all of Uzbekistan.",
+    "addressTitle": "Production and office",
+    "addressNote": "Call before your visit - we will prepare the samples you need.",
+    "deliveryTitle": "Delivery",
+    "deliveryText": "We deliver orders to every region of Uzbekistan through our logistics partners. Delivery terms for large volumes are agreed individually.",
+    "regionsTitle": "Delivery regions",
+    "regions": [
+      "Tashkent",
+      "Namangan",
+      "Andijan",
+      "Fergana",
+      "Samarkand",
+      "Bukhara",
+      "Kashkadarya",
+      "Surkhandarya",
+      "Khorezm",
+      "Karakalpakstan"
+    ],
+    "howTitle": "How to reach us",
+    "howItems": [
+      {
+        "title": "By car",
+        "text": "Namangan city, Yangi Namangan district, Guzal street - the Orzu small industrial zone"
+      },
+      {
+        "title": "By phone",
+        "text": "Call us - we will send the address with a map link"
+      },
+      {
+        "title": "On Telegram",
+        "text": "Write to us - we will send the location right away"
+      }
+    ],
+    "openInMaps": "Open in Google Maps"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This page does not exist or has been moved.",
+    "button": "Back to home"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Could not reach the server. Check your internet connection.",
+    "rateLimited": "Too many requests. Please wait a moment and try again."
+  },
+  "seo": {
+    "home": {
+      "title": "AKSAM - manufacturer of ribbons, elastic tapes and labels | Namangan, Uzbekistan",
+      "description": "AKSAM has manufactured ribbons, elastic tapes and brand labels in Namangan since 2020. European equipment, ISO quality control, delivery across Uzbekistan."
+    },
+    "products": {
+      "title": "Product catalogue - ribbons, elastic tapes, labels | AKSAM",
+      "description": "AKSAM products: satin, grosgrain, jacquard and organza ribbons, woven and knitted elastic tapes, woven and hang tags. Custom orders, 5–20 working days."
+    },
+    "about": {
+      "title": "About the company - AKSAM, Namangan",
+      "description": "The story, values and team of AKSAM. On the Uzbek market since 2020 - European equipment and ISO quality control."
+    },
+    "contact": {
+      "title": "Contact - AKSAM, Namangan",
+      "description": "Get in touch with AKSAM: phone, Telegram, email or a website request. Address: Namangan, Yangi Namangan district."
+    },
+    "locations": {
+      "title": "Location and delivery - AKSAM",
+      "description": "Address of the AKSAM production complex: Namangan, Yangi Namangan district, Guzal street, 3. Delivery across Uzbekistan."
+    },
+    "default": {
+      "title": "AKSAM - ribbons, elastic tapes and labels | Namangan, Uzbekistan",
+      "description": "The AKSAM production complex - quality ribbons, elastic tapes and labels from Namangan to all of Uzbekistan."
+    },
+    "terms": {
+      "title": "Terms of Service - AKSAM",
+      "description": "Terms for using the AKSAM website and placing orders: order process, pricing, delivery, privacy and liability."
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Answers to your questions",
+    "subtitle": "The most common questions before placing an order."
+  },
+  "gallery": {
+    "eyebrow": "From the factory floor",
+    "title": "Inside the workshop",
+    "subtitle": "Get to know our modern production process, our products and our team."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: August 2026. Questions: +998 91 183 80 08."
+  }
+}
