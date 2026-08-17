@@ -9,16 +9,26 @@ import { ArrowLeft, BadgeCheck, ChevronRight, ListChecks, Quote, Ruler, Truck } 
 import { useTranslation } from "react-i18next";
 import { Gallery } from "@/components/product/Gallery";
 import { ProductOrderForm } from "@/components/product/ProductOrderForm";
+import { useEffect } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { PROCESS_STEPS, localized } from "@/lib/content";
+import { useDataStore } from "@/lib/data/store";
 import { blurPlaceholder } from "@/lib/utils";
 import type { Lang, ProductDto } from "@/lib/types";
 
 export function ProductClient({ product, related, lang }: { product: ProductDto; related: ProductDto[]; lang: Lang }) {
   const { t } = useTranslation();
-  const name = product.name[lang] || product.name.uz;
-  const highlights = product.highlights[lang]?.length ? product.highlights[lang] : product.highlights.uz;
-  const specs = product.specs[lang]?.length ? product.specs[lang] : product.specs.uz;
+
+  // Static prerender is instant; fresh edits from the admin arrive silently
+  // once the session data hydrates.
+  const hydratedProducts = useDataStore((s) => s.products);
+  const current = hydratedProducts?.find((p) => p.slug === product.slug) ?? product;
+  const relatedList = hydratedProducts
+    ? hydratedProducts.filter((p) => p.slug !== product.slug && p.category?.slug === product.category?.slug).slice(0, 4)
+    : related;
+  const name = current.name[lang] || current.name.uz;
+  const highlights = current.highlights[lang]?.length ? current.highlights[lang] : current.highlights.uz;
+  const specs = current.specs[lang]?.length ? current.specs[lang] : current.specs.uz;
   const steps = localized(PROCESS_STEPS, lang);
 
   return (
@@ -47,18 +57,18 @@ export function ProductClient({ product, related, lang }: { product: ProductDto;
 
       <div className="mt-6 grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:gap-14">
         <Reveal from="left">
-          <Gallery images={product.images} alt={name} />
+          <Gallery images={current.images} alt={name} />
         </Reveal>
 
         <Reveal from="right" delay={80}>
           <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-brand">
-            {product.category?.name[lang] || ""}
+            {current.category?.name[lang] || ""}
           </p>
           <h1 className="mt-2 text-3xl font-bold leading-[1.1] tracking-tight text-ink sm:text-4xl">
             {name}
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-ink/60 sm:text-base">
-            {product.short[lang] || product.short.uz}
+            {current.short[lang] || current.short.uz}
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2.5">
@@ -92,7 +102,7 @@ export function ProductClient({ product, related, lang }: { product: ProductDto;
           )}
 
           <div className="mt-8">
-            <ProductOrderForm product={product} lang={lang} />
+            <ProductOrderForm product={current} lang={lang} />
           </div>
         </Reveal>
       </div>
@@ -100,7 +110,7 @@ export function ProductClient({ product, related, lang }: { product: ProductDto;
       <Reveal className="mt-14">
         <h2 className="text-xl font-bold tracking-tight text-ink">{t("product.descriptionTitle")}</h2>
         <div className="mt-4 grid gap-6 lg:grid-cols-[1.6fr_1fr]">
-          <p className="text-[15px] leading-[1.9] text-ink/70">{product.description[lang] || product.description.uz}</p>
+          <p className="text-[15px] leading-[1.9] text-ink/70">{current.description[lang] || current.description.uz}</p>
           <blockquote className="relative h-fit rounded-xl bg-ink p-6 text-white">
             <Quote className="size-6 fill-brand text-brand" strokeWidth={0} />
             <p className="mt-3 text-[14.5px] font-medium leading-relaxed text-white/85">{t("product.qualityNote")}</p>
@@ -156,11 +166,11 @@ export function ProductClient({ product, related, lang }: { product: ProductDto;
         </div>
       </Reveal>
 
-      {related.length > 0 && (
+      {relatedList.length > 0 && (
         <section className="mt-16 border-t border-ink/8 pt-12">
           <h2 className="text-xl font-bold tracking-tight text-ink">{t("product.relatedTitle")}</h2>
           <div className="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
-            {related.slice(0, 4).map((p) => (
+            {relatedList.slice(0, 4).map((p) => (
               <Link key={p.id} href={`/${lang}/products/${p.slug}`} className="group">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-paper ring-1 ring-ink/5">
                   {p.images[0] && (

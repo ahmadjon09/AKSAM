@@ -97,7 +97,7 @@ export const CRAFT_ITEMS: Record<Lang, Step[]> = {
   ],
   ru: [
     { title: "Европейское оборудование", text: "Ткачество и обработка выполняются на современных европейских станках" },
-    { title: "Контроль качества ISO", text: "Каждый этап — от сырья до готового изделия — проходит проверку" },
+    { title: "Контроль качества ISO", text: "Каждый этап - от сырья до готового изделия - проходит проверку" },
     { title: "Точные сроки", text: "Производим за 5–20 рабочих дней в зависимости от объёма заказа" },
     { title: "Весь Узбекистан", text: "Доставляем из Намангана в любой регион республики" }
   ],
@@ -129,40 +129,76 @@ export const TESTIMONIALS: Record<Lang, Quote[]> = {
 
 export const ABOUT_VALUES: Record<Lang, ValueItem[]> = {
   uz: [
-    { title: "Sifat", text: "Har bir metrda — ISO nazorati va halol xomashyo" },
-    { title: "Aniqlik", text: "Kelishilgan muddat — qat'iy bajariladigan va'da" },
-    { title: "Hamkorlik", text: "Kichik ustaxonadan yirik fabrikagacha — har bir mijoz muhim" },
+    { title: "Sifat", text: "Har bir metrda - ISO nazorati va halol xomashyo" },
+    { title: "Aniqlik", text: "Kelishilgan muddat - qat'iy bajariladigan va'da" },
+    { title: "Hamkorlik", text: "Kichik ustaxonadan yirik fabrikagacha - har bir mijoz muhim" },
     { title: "Mas'uliyat", text: "Ishlab chiqarishdan yetkazib berishgacha to'liq javobgarlik" }
   ],
   ru: [
-    { title: "Качество", text: "В каждом метре — контроль ISO и честное сырьё" },
-    { title: "Точность", text: "Согласованный срок — обязательство, которое мы выполняем" },
-    { title: "Партнёрство", text: "От небольшой мастерской до крупной фабрики — важен каждый клиент" },
+    { title: "Качество", text: "В каждом метре - контроль ISO и честное сырьё" },
+    { title: "Точность", text: "Согласованный срок - обязательство, которое мы выполняем" },
+    { title: "Партнёрство", text: "От небольшой мастерской до крупной фабрики - важен каждый клиент" },
     { title: "Ответственность", text: "Полная ответственность от производства до доставки" }
   ],
   en: [
     { title: "Quality", text: "ISO inspection and honest raw materials in every metre" },
     { title: "Precision", text: "An agreed deadline is a commitment we keep" },
-    { title: "Partnership", text: "From a small workshop to a large factory — every client matters" },
+    { title: "Partnership", text: "From a small workshop to a large factory - every client matters" },
     { title: "Responsibility", text: "Full accountability from production to delivery" }
   ]
 };
 
 export const TEAM: Record<Lang, TeamMember[]> = {
   uz: [
-    { name: "Alisher Karimov", role: "Direktor / Asoschi", desc: "Umumiy boshqaruv va strategiya" },
-    { name: "Dilshod Rahimov", role: "Ishlab chiqarish bo'limi boshlig'i", desc: "Texnologik jarayonlar nazorati" },
-    { name: "Nilufar Azimova", role: "Sifat nazorati bo'limi", desc: "Mahsulot sifati va standartlar" }
+    {
+      "name": "Abdullhujaev Muxtor",
+      "role": "Direktor / Asoschi",
+      "desc": "Umumiy boshqaruv va strategiya"
+    },
+    {
+      "name": "Hasanov Muhammadtoyyib",
+      "role": "Ishlab chiqarish bo‘limi boshlig‘i",
+      "desc": "Texnologik jarayonlar nazorati"
+    },
+    {
+      "name": "Toʻychiyeva Dildora Soliyevna",
+      "role": "Sifat nazorati bo‘limi",
+      "desc": "Mahsulot sifati va standartlar"
+    }
   ],
   ru: [
-    { name: "Алишер Каримов", role: "Директор / Основатель", desc: "Общее управление и стратегия" },
-    { name: "Дилшод Рахимов", role: "Начальник производства", desc: "Контроль технологических процессов" },
-    { name: "Нилуфар Азимова", role: "Отдел контроля качества", desc: "Качество продукции и стандарты" }
+    {
+      "name": "Абдулхуджаев Мухтор",
+      "role": "Директор / Основатель",
+      "desc": "Общее управление и стратегия"
+    },
+    {
+      "name": "Хасанов Мухаммадтойиб",
+      "role": "Начальник отдела производства",
+      "desc": "Контроль технологических процессов"
+    },
+    {
+      "name": "Тўйчиева Дилдора Солиевна",
+      "role": "Отдел контроля качества",
+      "desc": "Качество продукции и стандарты"
+    }
   ],
   en: [
-    { name: "Alisher Karimov", role: "Director / Founder", desc: "Overall management and strategy" },
-    { name: "Dilshod Rahimov", role: "Head of production", desc: "Control of manufacturing processes" },
-    { name: "Nilufar Azimova", role: "Quality control", desc: "Product quality and standards" }
+    {
+      "name": "Abdullhujaev Muxtor",
+      "role": "Director / Founder",
+      "desc": "General management and strategy"
+    },
+    {
+      "name": "Hasanov Muhammadtoyyib",
+      "role": "Head of Production",
+      "desc": "Technological process control"
+    },
+    {
+      "name": "Toʻychiyeva Dildora Soliyevna",
+      "role": "Quality Control Department",
+      "desc": "Product quality and standards"
+    }
   ]
 };
 
@@ -174,19 +210,19 @@ export const REGIONS: Record<Lang, string[]> = {
 
 export const HOW_ITEMS: Record<Lang, HowItem[]> = {
   uz: [
-    { title: "Mashinada", text: "Namangan shahri, Yangi Namangan tumani, Go'zal ko'chasi — «Orzu» kichik sanoat zonasi" },
-    { title: "Telefon orqali", text: "Qo'ng'iroq qiling — manzilni xarita havolasi bilan jo'natamiz" },
-    { title: "Telegram orqali", text: "Yozing — geolokatsiyani darhol jo'natamiz" }
+    { title: "Mashinada", text: "Namangan shahri, Yangi Namangan tumani, Go'zal ko'chasi - «Orzu» kichik sanoat zonasi" },
+    { title: "Telefon orqali", text: "Qo'ng'iroq qiling - manzilni xarita havolasi bilan jo'natamiz" },
+    { title: "Telegram orqali", text: "Yozing - geolokatsiyani darhol jo'natamiz" }
   ],
   ru: [
-    { title: "На машине", text: "г. Наманган, Янгчинаманганский район, улица Гузаль — малая промышленная зона «Орзу»" },
-    { title: "По телефону", text: "Позвоните — отправим адрес со ссылкой на карту" },
-    { title: "В Telegram", text: "Напишите — сразу отправим геолокацию" }
+    { title: "На машине", text: "г. Наманган, Янгчинаманганский район, улица Гузаль - малая промышленная зона «Орзу»" },
+    { title: "По телефону", text: "Позвоните - отправим адрес со ссылкой на карту" },
+    { title: "В Telegram", text: "Напишите - сразу отправим геолокацию" }
   ],
   en: [
-    { title: "By car", text: "Namangan city, Yangi Namangan district, Guzal street — the Orzu small industrial zone" },
-    { title: "By phone", text: "Call us — we will send the address with a map link" },
-    { title: "On Telegram", text: "Write to us — we will send the location right away" }
+    { title: "By car", text: "Namangan city, Yangi Namangan district, Guzal street - the Orzu small industrial zone" },
+    { title: "By phone", text: "Call us - we will send the address with a map link" },
+    { title: "On Telegram", text: "Write to us - we will send the location right away" }
   ]
 };
 
@@ -197,26 +233,26 @@ export interface FaqItem {
 
 export const FAQ_ITEMS: Record<Lang, FaqItem[]> = {
   uz: [
-    { q: "Minimal buyurtma hajmi qancha?", a: "Lentalar va elastik tasmalar — 100 rulondan, to'qilgan yorliqlar — 1 000 donadan, osma yorliqlar — 500 donadan. Kichik sinov partiyalari uchun individual shartlar taklif qilamiz." },
+    { q: "Minimal buyurtma hajmi qancha?", a: "Lentalar va elastik tasmalar - 100 rulondan, to'qilgan yorliqlar - 1 000 donadan, osma yorliqlar - 500 donadan. Kichik sinov partiyalari uchun individual shartlar taklif qilamiz." },
     { q: "Buyurtma qancha vaqtda tayyor bo'ladi?", a: "Ommaviy partiyalar odatda 5–20 ish kunida tayyor bo'ladi. Dizayn talab qiladigan buyurtmalar (jakkard, yorliqlar) uchun namuna tayyorlashga 5–10 kun qo'shiladi." },
     { q: "O'zimning rangimda buyurtma qila olamanmi?", a: "Albatta. Pantone katalogi bo'yicha istalgan rangda bo'yaymiz, kerak bo'lsa namunaviy bo'yash ham qilamiz. Rang mosligi laboratoriya uskunasida tekshiriladi." },
-    { q: "Namunani qanday olish mumkin?", a: "Saytdagi forma, telefon yoki Telegram orqali ariza qoldiring — texnologimiz talablarni aniqlab, namunani 5–10 kunda tayyorlab beradi." },
+    { q: "Namunani qanday olish mumkin?", a: "Saytdagi forma, telefon yoki Telegram orqali ariza qoldiring - texnologimiz talablarni aniqlab, namunani 5–10 kunda tayyorlab beradi." },
     { q: "Yetkazib berish qanday tashkil qilingan?", a: "Buyurtmalarni O'zbekistonning barcha viloyatlariga logistika hamkorlarimiz orqali yetkazamiz. Yirik partiyalar uchun yetkazib berish shartlari individual kelishiladi." },
-    { q: "Narxlar qanday shakllanadi?", a: "Narx mahsulot turi, kenglik, ranglar soni va partiya hajmiga qarab individual hisoblanadi. Ariza qoldiring — 1 ish kuni ichida batafsil taklif yuboramiz." }
+    { q: "Narxlar qanday shakllanadi?", a: "Narx mahsulot turi, kenglik, ranglar soni va partiya hajmiga qarab individual hisoblanadi. Ariza qoldiring - 1 ish kuni ichida batafsil taklif yuboramiz." }
   ],
   ru: [
-    { q: "Какой минимальный объём заказа?", a: "Ленты и эластичные ленты — от 100 рулонов, тканые ярлыки — от 1 000 штук, навесные ярлыки — от 500 штук. Для небольших пробных партий предложим индивидуальные условия." },
+    { q: "Какой минимальный объём заказа?", a: "Ленты и эластичные ленты - от 100 рулонов, тканые ярлыки - от 1 000 штук, навесные ярлыки - от 500 штук. Для небольших пробных партий предложим индивидуальные условия." },
     { q: "Сколько времени занимает заказ?", a: "Крупные партии обычно готовы за 5–20 рабочих дней. Для заказов с дизайном (жаккард, ярлыки) добавляется 5–10 дней на изготовление образца." },
     { q: "Можно ли заказать в своём цвете?", a: "Конечно. Окрашиваем в любой цвет по каталогу Pantone, при необходимости сделаем пробную окраску. Соответствие цвета проверяется на лабораторном оборудовании." },
-    { q: "Как получить образец?", a: "Оставьте заявку через форму на сайте, по телефону или в Telegram — наш технолог уточнит требования и подготовит образец за 5–10 дней." },
+    { q: "Как получить образец?", a: "Оставьте заявку через форму на сайте, по телефону или в Telegram - наш технолог уточнит требования и подготовит образец за 5–10 дней." },
     { q: "Как организована доставка?", a: "Доставляем заказы во все регионы Узбекистана через логистических партнёров. Условия доставки крупных партий согласовываются индивидуально." },
-    { q: "Как формируются цены?", a: "Цена рассчитывается индивидуально в зависимости от типа продукции, ширины, количества цветов и объёма партии. Оставьте заявку — отправим подробное предложение в течение 1 рабочего дня." }
+    { q: "Как формируются цены?", a: "Цена рассчитывается индивидуально в зависимости от типа продукции, ширины, количества цветов и объёма партии. Оставьте заявку - отправим подробное предложение в течение 1 рабочего дня." }
   ],
   en: [
-    { q: "What is the minimum order quantity?", a: "Ribbons and elastic tapes — from 100 rolls, woven labels — from 1,000 pieces, hang tags — from 500 pieces. We offer individual terms for small trial batches." },
+    { q: "What is the minimum order quantity?", a: "Ribbons and elastic tapes - from 100 rolls, woven labels - from 1,000 pieces, hang tags - from 500 pieces. We offer individual terms for small trial batches." },
     { q: "How long does an order take?", a: "Bulk batches are usually ready in 5–20 working days. Design-based orders (jacquard, labels) add 5–10 days for sample making." },
     { q: "Can I order in my own colour?", a: "Of course. We dye in any Pantone shade and can run a trial dyeing if needed. Colour matching is verified on laboratory equipment." },
-    { q: "How can I get a sample?", a: "Leave a request through the website form, by phone or on Telegram — our technologist will clarify the requirements and prepare a sample in 5–10 days." },
+    { q: "How can I get a sample?", a: "Leave a request through the website form, by phone or on Telegram - our technologist will clarify the requirements and prepare a sample in 5–10 days." },
     { q: "How is delivery organised?", a: "We deliver orders to every region of Uzbekistan through our logistics partners. Delivery terms for large volumes are agreed individually." },
     { q: "How are prices calculated?", a: "Pricing is individual, based on product type, width, number of colours and batch size. Leave a request and we will send a detailed quote within 1 working day." }
   ]
@@ -265,7 +301,7 @@ export const TERMS_SECTIONS: Record<Lang, TermsSection[]> = {
     { title: "Mahsulotlar haqidagi ma'lumotlar", text: "Saytdagi tavsiflar, rasmlar va texnik ko'rsatkichlar namuna sifatida taqdim etiladi. Tabiiy xomashyo va bo'yash jarayoni sababli rang va to'qima ishlab chiqarish partiyasiga qarab biroz farq qilishi mumkin. Aniq talablar har bir buyurtma uchun texnik topshiriqda qayd etiladi." },
     { title: "Buyurtma berish tartibi", text: "Buyurtma saytdagi forma (ism va telefon raqami), telefon yoki Telegram orqali qabul qilinadi. Mutaxassisimiz siz bilan bog'lanib, mahsulot turi, o'lcham, rang va miqdorni kelishadi. Dizayn talab qiladigan buyurtmalar uchun namuna tayyorlanadi va faqat siz tasdiqlaganingizdan keyin ommaviy ishlab chiqarish boshlanadi." },
     { title: "Narxlar va to'lov", text: "Saytda narxlar ko'rsatilmaydi: har bir buyurtma uchun narx mahsulot turi, kenglik, ranglar soni va partiya hajmiga qarab individual hisoblanadi. To'lov shartlari (oldindan to'lov miqdori, muddatlari) buyurtmani tasdiqlash bosqichida yozma ravishda kelishiladi." },
-    { title: "Ishlab chiqarish muddatlari", text: "Standart partiyalar odatda 5–20 ish kunida ishlab chiqariladi. Dizayn va namuna bosqichini talab qiladigan buyurtmalarga qo'shimcha 5–10 kun kiradi. Fors-major holatlarida muddatlar o'zgarishi mumkin — bu haqda mijoz darhol xabardor qilinadi." },
+    { title: "Ishlab chiqarish muddatlari", text: "Standart partiyalar odatda 5–20 ish kunida ishlab chiqariladi. Dizayn va namuna bosqichini talab qiladigan buyurtmalarga qo'shimcha 5–10 kun kiradi. Fors-major holatlarida muddatlar o'zgarishi mumkin - bu haqda mijoz darhol xabardor qilinadi." },
     { title: "Yetkazib berish", text: "Buyurtmalar O'zbekistonning barcha viloyatlariga logistika hamkorlarimiz orqali yetkaziladi. Mahsulot qabul qilingan paytdan boshlab unga egalik huquqi va javobgarlik mijozga o'tadi. Qabul paytida partiyani tekshirib olish tavsiya etiladi." },
     { title: "Intellektual mulk", text: "Mijoz taqdim etgan logotip, dizayn va matnlar bo'yicha huquqlar mijozga tegishli va ular faqat buyurtmani bajarish uchun ishlatiladi. Saytdagi matnlar, rasmlar va AKSAM savdo belgisi himoyalangan; yozma ruxsatsiz nusxalash taqiqlanadi." },
     { title: "Maxfiylik", text: "Ariza orqali qoldirilgan shaxsiy ma'lumotlar (ism, telefon raqami) faqat buyurtmani qayta ishlash va siz bilan bog'lanish uchun ishlatiladi. Ma'lumotlar uchinchi shaxslarga berilmaydi va sotilmaydi." },
@@ -277,7 +313,7 @@ export const TERMS_SECTIONS: Record<Lang, TermsSection[]> = {
     { title: "Информация о продукции", text: "Описания, изображения и технические характеристики на сайте носят ознакомительный характер. Из-за натурального сырья и процесса окраски цвет и фактура могут незначительно отличаться от партии к партии. Точные требования фиксируются в техническом задании для каждого заказа." },
     { title: "Порядок оформления заказа", text: "Заказы принимаются через форму на сайте (имя и номер телефона), по телефону или в Telegram. Наш специалист свяжется с вами и согласует тип продукции, размер, цвет и количество. Для заказов с дизайном изготавливается образец, и серийное производство начинается только после вашего утверждения." },
     { title: "Цены и оплата", text: "Цены на сайте не указываются: стоимость каждого заказа рассчитывается индивидуально в зависимости от типа продукции, ширины, количества цветов и объёма партии. Условия оплаты (размер предоплаты, сроки) согласовываются письменно на этапе подтверждения заказа." },
-    { title: "Сроки производства", text: "Стандартные партии обычно изготавливаются за 5–20 рабочих дней. Заказы, требующие этапа дизайна и образца, включают дополнительно 5–10 дней. В случае форс-мажорных обстоятельств сроки могут измениться — клиент незамедлительно уведомляется." },
+    { title: "Сроки производства", text: "Стандартные партии обычно изготавливаются за 5–20 рабочих дней. Заказы, требующие этапа дизайна и образца, включают дополнительно 5–10 дней. В случае форс-мажорных обстоятельств сроки могут измениться - клиент незамедлительно уведомляется." },
     { title: "Доставка", text: "Заказы доставляются во все регионы Узбекистана через наших логистических партнёров. Право собственности и ответственность переходят к клиенту с момента приёмки продукции. Рекомендуем проверять партию при получении." },
     { title: "Интеллектуальная собственность", text: "Права на предоставленные клиентом логотипы, дизайн и тексты принадлежат клиенту и используются только для выполнения заказа. Тексты, изображения и товарный знак AKSAM на сайте защищены; копирование без письменного разрешения запрещено." },
     { title: "Конфиденциальность", text: "Персональные данные, оставленные в заявке (имя, номер телефона), используются только для обработки заказа и связи с вами. Данные не передаются и не продаются третьим лицам." },

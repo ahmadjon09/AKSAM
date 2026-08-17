@@ -1,7 +1,7 @@
 // sitemap.xml — generated at request time so new products appear without a
 // redeploy. Every URL carries its three hreflang alternates (uz/ru/en).
 
-import { fetchProductsServer } from "@/lib/api";
+import { fetchProductsLive } from "@/lib/api";
 import { LANGS, siteUrl } from "@/lib/seo";
 
 export const runtime = "edge";
@@ -11,7 +11,7 @@ const STATIC_PATHS = ["", "/products", "/about", "/contact", "/locations", "/ter
 
 export async function GET() {
   const base = siteUrl();
-  const products = await fetchProductsServer();
+  const products = await fetchProductsLive();
   const entries: string[] = [];
 
   const alternates = (path: string) =>

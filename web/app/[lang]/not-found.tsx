@@ -1,16 +1,39 @@
-// Localized 404 with links back to home and the catalog.
+// Localized 404. Doubles as a client-side lookup for products created in
+// the admin after the last build: if the path is /products/<slug> and the
+// slug exists in the freshly hydrated catalog, the product page renders
+// here instead of an error.
 
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { Home } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { ProductClient } from "@/components/product/ProductClient";
+import { useDataStore } from "@/lib/data/store";
+import { LANGS } from "@/lib/i18n";
+import type { Lang } from "@/lib/types";
 
 export default function NotFound() {
   const { t } = useTranslation();
   const params = useParams<{ lang?: string }>();
-  const lang = params?.lang ?? "uz";
+  const pathname = usePathname();
+  const lang = (LANGS.includes(params?.lang as Lang) ? params?.lang : "uz") as Lang;
+
+  const hydratedProducts = useDataStore((s) => s.products);
+  const slugMatch = pathname.match(new RegExp(`^/(${LANGS.join("|")})/products/([a-z0-9-]+)$`));
+  if (slugMatch && hydratedProducts) {
+    const found = hydratedProducts.find((p) => p.slug === slugMatch[2]);
+    if (found) {
+      return (
+        <div className="pt-28 sm:pt-32">
+          <div className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 sm:pb-28 lg:px-12">
+            <ProductClient product={found} related={[]} lang={lang} />
+          </div>
+        </div>
+      );
+    }
+  }
 
   return (
     <div className="flex min-h-[80vh] items-center justify-center px-4 pt-24">

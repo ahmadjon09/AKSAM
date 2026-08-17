@@ -85,7 +85,7 @@
   },
   "products": {
     "title": "Products",
-    "subtitle": "Everything in the catalogue — in three languages",
+    "subtitle": "Everything in the catalogue - in three languages",
     "add": "New product",
     "createTitle": "Create product",
     "editTitle": "Edit product",
@@ -141,7 +141,7 @@
   },
   "categories": {
     "title": "Categories",
-    "subtitle": "Product lines — in three languages",
+    "subtitle": "Product lines - in three languages",
     "add": "New category",
     "createTitle": "Create category",
     "editTitle": "Edit category",
@@ -214,8 +214,8 @@
     "email": "Email",
     "address": "Address",
     "workHours": "Working hours",
-    "mapLat": "Map — latitude",
-    "mapLng": "Map — longitude",
+    "mapLat": "Map - latitude",
+    "mapLng": "Map - longitude",
     "mapLabel": "Map marker label",
     "instagram": "Instagram link",
     "telegram": "Telegram link",

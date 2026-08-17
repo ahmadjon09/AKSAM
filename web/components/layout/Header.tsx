@@ -19,10 +19,12 @@ import { LangSwitcher } from "./LangSwitcher";
 import { useScrolled } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
 import { useUiStore } from "@/lib/store/ui";
+import { useDataStore } from "@/lib/data/store";
 import { LANGS } from "@/lib/i18n";
 import type { Lang } from "@/lib/types";
 
-export function Header({ lang, phone }: { lang: Lang; phone: string }) {
+export function Header({ lang }: { lang: Lang }) {
+  const phone = useDataStore((s) => s.settings.phone);
   const { t } = useTranslation();
   const pathname = usePathname();
   const scrolled = useScrolled(10);
@@ -41,15 +43,27 @@ export function Header({ lang, phone }: { lang: Lang; phone: string }) {
     setMenuOpen(false);
   }, [pathname]);
 
-  // Strip any locale prefix to decide which item is active.
-  const cleanPath = pathname.replace(new RegExp(`^/(${LANGS.join("|")})`), "") || "/";
-  const isHome = cleanPath === "/";
-  const isActive = (href: string) => {
-    const cleanHref = href.replace(new RegExp(`^/(${LANGS.join("|")})`), "");
-    if (cleanHref === "/") return cleanPath === "/";
-    return cleanPath === cleanHref || cleanPath.startsWith(cleanHref + "/");
+  const normalizePath = (path: string) => {
+    const normalized = path.replace(/\/+$/, "");
+    return normalized || "/";
   };
 
+  const currentPath = normalizePath(pathname);
+
+  const isActive = (href: string) => {
+    const targetPath = normalizePath(href);
+
+    if (targetPath === `/${lang}`) {
+      return currentPath === `/${lang}`;
+    }
+
+    return (
+      currentPath === targetPath ||
+      currentPath.startsWith(`${targetPath}/`)
+    );
+  };
+
+  const isHome = currentPath === `/${lang}`;
   // Over the dark hero the header is transparent with light text; once the
   // user scrolls (or the menu opens) it turns into the solid white bar.
   const overHero = isHome && !scrolled && !menuOpen;

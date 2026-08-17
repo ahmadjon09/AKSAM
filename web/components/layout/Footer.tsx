@@ -7,11 +7,13 @@ import Link from "next/link";
 import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/ui/Logo";
+import { useDataStore } from "@/lib/data/store";
 import { pickText } from "@/lib/seo";
-import type { Lang, PublicSettingsDto } from "@/lib/types";
+import type { Lang } from "@/lib/types";
 
-export function Footer({ lang, settings }: { lang: Lang; settings: PublicSettingsDto }) {
+export function Footer({ lang }: { lang: Lang }) {
   const { t } = useTranslation();
+  const settings = useDataStore((s) => s.settings);
   const year = new Date().getFullYear();
   const phoneHref = `tel:${settings.phone.replace(/[^\d+]/g, "")}`;
 
@@ -54,7 +56,7 @@ export function Footer({ lang, settings }: { lang: Lang; settings: PublicSetting
                   className="grid size-10 place-items-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-white/40 hover:text-white"
                   aria-label="Facebook"
                 >
-                  <TelegramIcon />
+                  <FacebookIcon />
                 </a>
               )}
             </div>
@@ -134,6 +136,14 @@ function InstagramIcon() {
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="size-4.5" fill="currentColor">
+      <path d="M13.5 21v-7.2h2.4l.4-2.9h-2.8V9c0-.8.3-1.4 1.5-1.4h1.4V5.1c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2.4H8.6v2.9H11V21h2.5Z" />
     </svg>
   );
 }

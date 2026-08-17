@@ -16,19 +16,12 @@ if (!env.telegramBotToken) {
 
 const bot = new Bot(env.telegramBotToken);
 
-
-bot.command("start", async (ctx) => {
-  await ctx.reply(`
-    Server is live 👍
-    ${ctx.chat.id}`);
-});
-
 bot.command("id", async (ctx) => {
   await ctx.reply(`Chat ID: ${ctx.chat.id}`);
 });
 
 bot.command("status", async (ctx) => {
-  const base = process.env.API_PUBLIC_URL ?? "https://api.aksam.uz";
+  const base = process.env.API_PUBLIC_URL ?? "http://localhost:4000";
   try {
     const res = await fetch(`${base}/health`, { signal: AbortSignal.timeout(5000) });
     const body = (await res.json()) as { status: string; db: string; cache: string };

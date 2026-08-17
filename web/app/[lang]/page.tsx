@@ -1,6 +1,7 @@
 // Home page: hero, marquee strip, product lines, featured products, brand
 // story, process, quality pillars, testimonials and the closing CTA.
 
+export const dynamic = "error";
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { Marquee } from "@/components/ui/Marquee";
@@ -18,8 +19,6 @@ import { buildPageMetadata, organizationJsonLd } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
