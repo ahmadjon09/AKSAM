@@ -8,10 +8,10 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CatalogClient } from "@/components/catalog/CatalogClient";
 import { ProductGridSkeleton } from "@/components/ui/Skeleton";
-import { DEMO_CATEGORIES, DEMO_PRODUCTS } from "@/lib/fallback/data";
 import { buildPageMetadata } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
+import { fetchCategoriesServer, fetchProductsServer } from "@/lib/api";
 
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -30,8 +30,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
   const t = getServerT(lang as Lang);
   // Static edge render with the bundled catalog; fresh data arrives through
   // client hydration, so this page never waits on the API.
-  const products = DEMO_PRODUCTS;
-  const categories = DEMO_CATEGORIES;
+  const products = await fetchProductsServer();
+  const categories = await fetchCategoriesServer();
   const initialCategory = "all";
 
   return (

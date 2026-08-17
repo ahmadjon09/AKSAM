@@ -21,6 +21,7 @@ import type {
   PublicSettingsDto,
   VisitorsDto,
 } from "../types";
+import { unstable_cache } from "next/cache";
 
 // ---------------------------------------------------------------------------
 // Server-side reads (build time + ISR)
@@ -92,59 +93,77 @@ export async function fetchProductsLive(): Promise<ProductDto[]> {
   return DEMO_PRODUCTS;
 }
 
-export async function fetchProductsServer(): Promise<ProductDto[]> {
-  try {
-    const json = await serverFetch<{
-      data: ProductDto[];
-    }>("/v1/public/products");
+export const fetchProductsServer = unstable_cache(
+  async (): Promise<ProductDto[]> => {
+    try {
+      const json = await serverFetch<{
+        data: ProductDto[];
+      }>("/v1/public/products");
 
-    if (
-      !Array.isArray(json.data) ||
-      json.data.length === 0
-    ) {
+      if (!Array.isArray(json.data) || json.data.length === 0) {
+        return DEMO_PRODUCTS;
+      }
+
+      return json.data;
+    } catch {
       return DEMO_PRODUCTS;
     }
-
-    return json.data;
-  } catch {
-    return DEMO_PRODUCTS;
+  },
+  ["public-products"],
+  {
+    revalidate: 300,
   }
-}
+);
 
-export async function fetchCategoriesServer(): Promise<CategoryDto[]> {
-  try {
-    const json = await serverFetch<{
-      data: CategoryDto[];
-    }>("/v1/public/categories");
 
-    if (
-      !Array.isArray(json.data) ||
-      json.data.length === 0
-    ) {
+export const fetchCategoriesServer = unstable_cache(
+  async (): Promise<CategoryDto[]> => {
+    try {
+      const json = await serverFetch<{
+        data: CategoryDto[];
+      }>("/v1/public/categories");
+
+      if (
+        !Array.isArray(json.data) ||
+        json.data.length === 0
+      ) {
+        return DEMO_CATEGORIES;
+      }
+
+      return json.data;
+    } catch {
       return DEMO_CATEGORIES;
     }
-
-    return json.data;
-  } catch {
-    return DEMO_CATEGORIES;
+  },
+  ["public-categories"],
+  {
+    revalidate: 300,
+    tags: ["public-categories"],
   }
-}
+);
 
-export async function fetchSettingsServer(): Promise<PublicSettingsDto> {
-  try {
-    const json = await serverFetch<{
-      data: PublicSettingsDto;
-    }>("/v1/public/settings");
+export const fetchSettingsServer = unstable_cache(
+  async (): Promise<PublicSettingsDto> => {
+    try {
+      const json = await serverFetch<{
+        data: PublicSettingsDto;
+      }>("/v1/public/settings");
 
-    if (!json.data?.siteName) {
+      if (!json.data?.siteName) {
+        return DEMO_SETTINGS;
+      }
+
+      return json.data;
+    } catch {
       return DEMO_SETTINGS;
     }
-
-    return json.data;
-  } catch {
-    return DEMO_SETTINGS;
+  },
+  ["public-settings"],
+  {
+    revalidate: 300,
+    tags: ["public-settings"],
   }
-}
+);
 
 // ---------------------------------------------------------------------------
 // Public browser-side calls

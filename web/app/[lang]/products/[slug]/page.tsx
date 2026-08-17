@@ -6,7 +6,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductClient } from "@/components/product/ProductClient";
 import { fetchProductsServer } from "@/lib/api";
-import { DEMO_PRODUCTS } from "@/lib/fallback/data";
 import { buildPageMetadata, productJsonLd, pickText } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
@@ -16,9 +15,10 @@ import type { Lang } from "@/lib/types";
 // not-found page, which looks them up in the hydrated catalog.
 export const dynamicParams = false;
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  let products = await fetchProductsServer()
   return ["uz", "ru", "en"].flatMap((lang) =>
-    DEMO_PRODUCTS.map((product) => ({ lang, slug: product.slug }))
+    products.map((product) => ({ lang, slug: product.slug }))
   );
 }
 
@@ -53,6 +53,7 @@ export default async function ProductPage({ params }: { params: Promise<{ lang: 
   const { lang, slug } = await params;
   const products = await fetchProductsServer();
   const product = products.find((p) => p.slug === slug);
+
   if (!product) notFound();
 
   const related = products
