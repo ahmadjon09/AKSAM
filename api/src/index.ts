@@ -24,6 +24,7 @@ import adminLeadRoutes from "./routes/adminLeads";
 import adminSettingsRoutes from "./routes/adminSettings";
 import adminStatsRoutes from "./routes/adminStats";
 import adminUploadRoutes from "./routes/adminUpload";
+
 const app = Fastify({
   loggerInstance: logger,
   bodyLimit: 1_000_000,
@@ -58,12 +59,10 @@ app.setNotFoundHandler((request, reply) => {
 
 
 async function main() {
-  // ------------------------------------------------------------------ plugins
   await app.register(helmet, {
     contentSecurityPolicy: false, // API responses are JSON, not documents
     crossOriginResourcePolicy: { policy: "cross-origin" }
   });
-
   await app.register(cors, {
     origin: (origin, cb) => {
       if (!origin) return cb(null, true);
@@ -101,6 +100,7 @@ async function main() {
       "Authorization"
     ]
   });
+
   await app.register(cookie);
   await app.register(multipart, { limits: { fileSize: 8 * 1024 * 1024, files: 1 } });
   await app.register(rateLimitPlugin);
@@ -156,8 +156,6 @@ async function main() {
   };
 
   keepServerAlive()
-
-  // ------------------------------------------------------------- lifecycle
   const flusher = startAnalyticsFlusher();
 
   let closing = false;

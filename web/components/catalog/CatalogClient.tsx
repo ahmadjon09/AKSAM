@@ -5,19 +5,20 @@
 
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { ProductCard } from "@/components/catalog/ProductCard";
 import { Reveal } from "@/components/ui/Reveal";
 import { useDebouncedValue } from "@/lib/hooks";
+import { useDataStore } from "@/lib/data/store";
 import { cn } from "@/lib/utils";
 import type { CategoryDto, Lang, ProductDto } from "@/lib/types";
 
 export function CatalogClient({
   lang,
-  products,
+  products: initialProducts,
   categories,
   initialCategory
 }: {
@@ -31,6 +32,14 @@ export function CatalogClient({
   const searchParams = useSearchParams();
   const [query, setQuery] = useState("");
   const debouncedQuery = useDebouncedValue(query, 180);
+
+  // Static prerender shows build-time data instantly; when the session
+  // hydration lands, the freshest catalog silently replaces it.
+  const hydratedProducts = useDataStore((s) => s.products);
+  const [products, setProducts] = useState(initialProducts);
+  useEffect(() => {
+    if (hydratedProducts) setProducts(hydratedProducts);
+  }, [hydratedProducts]);
 
   const activeCategory = searchParams.get("category") ?? initialCategory;
 

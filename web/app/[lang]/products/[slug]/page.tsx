@@ -6,12 +6,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProductClient } from "@/components/product/ProductClient";
 import { fetchProductsServer } from "@/lib/api";
+import { DEMO_PRODUCTS } from "@/lib/fallback/data";
 import { buildPageMetadata, productJsonLd, pickText } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
+// Every known product is prerendered at build time, so product navigation
+// is instant. Admin-added slugs are handled client-side by the locale
+// not-found page, which looks them up in the hydrated catalog.
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return ["uz", "ru", "en"].flatMap((lang) =>
+    DEMO_PRODUCTS.map((product) => ({ lang, slug: product.slug }))
+  );
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params;

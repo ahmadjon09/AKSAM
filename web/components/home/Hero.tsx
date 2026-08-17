@@ -48,7 +48,7 @@ export function Hero({ lang }: { lang: Lang }) {
   }, [reduced]);
 
   return (
-    <section ref={scope} className="relative flex items-end overflow-hidden bg-ink text-white">
+    <section ref={scope} className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-white">
       <div className="absolute inset-0 overflow-hidden">
         <Image
           data-hero-img
@@ -63,7 +63,8 @@ export function Hero({ lang }: { lang: Lang }) {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/25" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/45 via-transparent to-transparent" />
       </div>
-      <div className="relative mx-auto w-full max-w-7xl px-4 pt-20 pb-16 sm:px-6 sm:pb-24 lg:px-8">
+
+      <div className="relative mx-auto w-full max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pb-24 lg:px-8">
         <p data-hero-line className="text-[12px] font-bold uppercase tracking-[0.24em] text-white/70 sm:text-[13px]">
           {t("hero.eyebrow")}
         </p>
@@ -102,7 +103,7 @@ export function Hero({ lang }: { lang: Lang }) {
 
       <div className="absolute bottom-8 right-6 hidden items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40 md:flex">
         {t("hero.scroll")}
-        <ArrowDown className="size-3.5" />
+        <ArrowDown className="size-3.5 animate-bounce-soft" />
       </div>
     </section>
   );

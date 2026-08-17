@@ -1,11 +1,57 @@
-// Bundled demo catalog. This is the single source of truth for local
-// development: the API seed script imports this file, and the storefront
-// falls back to it whenever the backend is unreachable or returns nothing.
-// Keep it dependency-free (no next/* imports) so the API can import it too.
+// Self-contained demo catalog for the API seed script.
+// This is an intentional copy of the data the storefront also bundles -
+// the two projects share no code, so each can be deployed on its own.
 
-import type { CategoryDto, ProductDto, PublicSettingsDto } from "../types";
+interface L { uz: string; ru: string; en: string }
+interface SpecItem { label: string; value: string }
 
-export const DEMO_CATEGORIES: CategoryDto[] = [
+interface Cat {
+  id: string;
+  slug: string;
+  name: L;
+  description: L;
+  image: string | null;
+  isActive: boolean;
+  sortOrder: number;
+}
+
+interface Prod {
+  id: string;
+  slug: string;
+  category: { slug: string; name: L } | null;
+  name: L;
+  short: L;
+  description: L;
+  metaTitle: L;
+  metaDesc: L;
+  highlights: Record<"uz" | "ru" | "en", string[]>;
+  specs: Record<"uz" | "ru" | "en", SpecItem[]>;
+  images: string[];
+  isActive: boolean;
+  sortOrder: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface Settings {
+  siteName: string;
+  tagline: L;
+  phone: string;
+  phone2: string;
+  email: string;
+  address: L;
+  workHours: L;
+  mapLat: number;
+  mapLng: number;
+  mapLabel: L;
+  instagram: string;
+  telegram: string;
+  facebook: string;
+}
+
+
+
+export const DEMO_CATEGORIES: Cat[] = [
   {
     id: "cat-lentalar",
     slug: "lentalar",
@@ -59,7 +105,7 @@ export const DEMO_CATEGORIES: CategoryDto[] = [
   }
 ];
 
-export const DEMO_PRODUCTS: ProductDto[] = [
+export const DEMO_PRODUCTS: Prod[] = [
   {
     id: "pr-atlas",
     slug: "atlas-lentalar",
@@ -431,7 +477,7 @@ export const DEMO_PRODUCTS: ProductDto[] = [
   }
 ];
 
-export const DEMO_SETTINGS: PublicSettingsDto = {
+export const DEMO_SETTINGS: Settings = {
   siteName: "AKSAM",
   tagline: {
     uz: "Lentalar, elastik tasmalar va yorliqlar ishlab chiqaruvchisi",
@@ -439,7 +485,7 @@ export const DEMO_SETTINGS: PublicSettingsDto = {
     en: "Manufacturer of ribbons, elastic tapes and labels"
   },
   phone: "+998 91 183 80 08",
-  phone2: "",
+  phone2: "+998 33 183 80 08",
   email: "abdullaxodjayev@mail.ru",
   address: {
     uz: "Namangan viloyati, Namangan sh., Yangi Namangan tumani, Go'zal MFY, 5-o'tish yo'li, Go'zal ko'chasi, 3-uy",
@@ -447,9 +493,9 @@ export const DEMO_SETTINGS: PublicSettingsDto = {
     en: "Namangan region, Namangan city, Yangi Namangan district, Guzal neighbourhood, 5th passage, Guzal street, 3"
   },
   workHours: {
-    uz: "Du–Shan: 09:00–18:00",
-    ru: "Пн–Сб: 09:00–18:00",
-    en: "Mon–Sat: 09:00–18:00"
+    uz: "Du–Shan: 08:00 - 19:00",
+    ru: "Пн–Сб: 08:00 - 19:00",
+    en: "Mon–Sat: 08:00 - 19:00"
   },
   mapLat: 41.0249587,
   mapLng: 71.557402,
@@ -462,6 +508,3 @@ export const DEMO_SETTINGS: PublicSettingsDto = {
   telegram: "https://t.me/namaksam",
   facebook: "https://www.facebook.com/people/AKSAM-Labels-and-Accessories/100083607540935/?sk=about"
 };
-
-export const DEMO_PRODUCTS_BY_SLUG = new Map(DEMO_PRODUCTS.map((p) => [p.slug, p]));
-export const DEMO_CATEGORIES_BY_SLUG = new Map(DEMO_CATEGORIES.map((c) => [c.slug, c]));

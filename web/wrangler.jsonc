@@ -1,13 +1,15 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // AKSAM storefront on Cloudflare Pages
   "name": "aksam-web",
-  "main": ".open-next/worker.js",
-  "compatibility_date": "2026-07-29",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // @cloudflare/next-on-pages emits the static worker output here
+  "pages_build_output_dir": ".vercel/output/static",
+  "observability": { "enabled": true },
+  "vars": {
+    // Runtime-only vars. NOTE: NEXT_PUBLIC_* values are inlined at build
+    // time — set them in the Cloudflare Pages build settings instead.
+    "NODE_ENV": "production"
   }
 }

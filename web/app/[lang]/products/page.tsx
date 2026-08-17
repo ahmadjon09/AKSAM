@@ -2,17 +2,17 @@
 // CatalogClient (client), data is fetched server-side per request and edge-
 // cached. Suspense keeps useSearchParams happy under streaming.
 
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { CatalogClient } from "@/components/catalog/CatalogClient";
 import { ProductGridSkeleton } from "@/components/ui/Skeleton";
-import { fetchCategoriesServer, fetchProductsServer } from "@/lib/api";
+import { DEMO_CATEGORIES, DEMO_PRODUCTS } from "@/lib/fallback/data";
 import { buildPageMetadata } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
@@ -25,18 +25,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   });
 }
 
-export default async function ProductsPage({
-  params,
-  searchParams
-}: {
-  params: Promise<{ lang: string }>;
-  searchParams: Promise<{ category?: string }>;
-}) {
+export default async function ProductsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  const { category } = await searchParams;
   const t = getServerT(lang as Lang);
-  const [products, categories] = await Promise.all([fetchProductsServer(), fetchCategoriesServer()]);
-  const initialCategory = category ?? "all";
+  // Static edge render with the bundled catalog; fresh data arrives through
+  // client hydration, so this page never waits on the API.
+  const products = DEMO_PRODUCTS;
+  const categories = DEMO_CATEGORIES;
+  const initialCategory = "all";
 
   return (
     <div className="pt-28 sm:pt-36">

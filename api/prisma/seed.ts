@@ -9,7 +9,7 @@ import {
   DEMO_CATEGORIES,
   DEMO_PRODUCTS,
   DEMO_SETTINGS
-} from "../../web/lib/fallback/data";
+} from "./seed-data";
 import { hashPassword } from "../src/lib/tokens";
 
 const prisma = new PrismaClient();
@@ -31,7 +31,7 @@ function hashVisitorToken(token: string): string {
 
 async function main() {
   const adminEmail = (process.env.ADMIN_EMAIL ?? "admin@aksam.uz").toLowerCase();
-  const adminPassword = process.env.ADMIN_PASSWORD ?? "Aksam2026!";
+  const adminPassword = process.env.ADMIN_PASSWORD ?? "Aksam2026uz!";
 
   console.log("Seeding AKSAM database…");
 
@@ -191,7 +191,7 @@ async function main() {
 
   // Sample leads so the panel has something to show.
   const leadCount = await prisma.lead.count();
-  if (leadCount === 0) {
+  if (false) {
     const sampleLeads = [
       { name: "Bekzod Toshpulatov", phone: "+998901234567", product: "Atlas lentalar", daysAgo: 0 },
       { name: "Ольга Смирнова", phone: "+998909876543", product: "To'qilgan yorliqlar", daysAgo: 1 },
@@ -217,7 +217,7 @@ async function main() {
 
   // Sample analytics history (last 30 days) so charts look alive.
   const visitorCount = await prisma.visitorDay.count();
-  if (visitorCount === 0) {
+  if (false) {
     let created = 0;
     for (let i = 30; i >= 0; i--) {
       const day = dayKey(new Date(Date.now() - i * 24 * 60 * 60 * 1000));

@@ -237,18 +237,18 @@
     "teamTitle": "Our specialists",
     "team": [
       {
-        "name": "Alisher Karimov",
+        "name": "Abdullhujaev Muxtor",
         "role": "Director / Founder",
-        "desc": "Overall management and strategy"
+        "desc": "General management and strategy"
       },
       {
-        "name": "Dilshod Rahimov",
-        "role": "Head of production",
-        "desc": "Control of manufacturing processes"
+        "name": "Hasanov Muhammadtoyyib",
+        "role": "Head of Production",
+        "desc": "Technological process control"
       },
       {
-        "name": "Nilufar Azimova",
-        "role": "Quality control",
+        "name": "Toʻychiyeva Dildora Soliyevna",
+        "role": "Quality Control Department",
         "desc": "Product quality and standards"
       }
     ],

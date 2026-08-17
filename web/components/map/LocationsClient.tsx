@@ -8,11 +8,13 @@ import { useTranslation } from "react-i18next";
 import { LocationsMap } from "@/components/map/LocationsMap";
 import { Reveal } from "@/components/ui/Reveal";
 import { HOW_ITEMS, localized, REGIONS } from "@/lib/content";
+import { useDataStore } from "@/lib/data/store";
 import { pickText } from "@/lib/seo";
-import type { Lang, PublicSettingsDto } from "@/lib/types";
+import type { Lang } from "@/lib/types";
 
-export function LocationsClient({ lang, settings }: { lang: Lang; settings: PublicSettingsDto }) {
+export function LocationsClient({ lang }: { lang: Lang }) {
   const { t } = useTranslation();
+  const settings = useDataStore((s) => s.settings);
   const regions = localized(REGIONS, lang);
   const howItems = localized(HOW_ITEMS, lang);
   const howIcons = [Car, Phone, Send];

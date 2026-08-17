@@ -56,6 +56,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+button {
+  cursor: pointer;
+}
+
 ::selection {
   background: rgba(200, 16, 46, 0.9);
   color: #ffffff;
@@ -94,8 +98,4 @@ body {
   html {
     scroll-behavior: auto;
   }
-}
-
-button {
-  cursor: pointer;
 }

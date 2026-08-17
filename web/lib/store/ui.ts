@@ -68,6 +68,10 @@ export const useUiStore = create<UiState>((set) => ({
     }));
   },
 
+  // --------------------------------------------------
+  // Order modal
+  // --------------------------------------------------
+
   orderModalOpen: false,
 
   orderProduct: null,

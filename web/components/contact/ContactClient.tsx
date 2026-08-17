@@ -7,11 +7,13 @@ import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
+import { useDataStore } from "@/lib/data/store";
 import { pickText } from "@/lib/seo";
-import type { Lang, PublicSettingsDto } from "@/lib/types";
+import type { Lang } from "@/lib/types";
 
-export function ContactClient({ lang, settings }: { lang: Lang; settings: PublicSettingsDto }) {
+export function ContactClient({ lang }: { lang: Lang }) {
   const { t } = useTranslation();
+  const settings = useDataStore((s) => s.settings);
   const phoneHref = `tel:${settings.phone.replace(/[^\d+]/g, "")}`;
 
   const cards = [
@@ -112,7 +114,7 @@ export function ContactClient({ lang, settings }: { lang: Lang; settings: Public
                     <span className="block text-[12.5px] font-bold uppercase tracking-[0.12em] text-white/50">
                       {t("contact.telegramLabel")}
                     </span>
-                    <span className="mt-0.5 block text-[15px] font-semibold">@aksam_uz</span>
+                    <span className="mt-0.5 block text-[15px] font-semibold">@namaksam</span>
                   </span>
                 </a>
               )}

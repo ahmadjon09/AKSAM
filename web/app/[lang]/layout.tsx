@@ -1,52 +1,19 @@
-// Locale layout: shared header/footer, providers, and per-request server
-// data (settings). Public pages under [lang] are rendered dynamically on the
-// edge and edge-cached by the middleware cache rules, so content added in
-// the admin appears without a redeploy.
+// Minimal layout for the locale segment: its only job is to prerender the
+// three locales at build time, so every page under [lang] becomes a fully
+// static route (instant navigation, Cloudflare-compatible). The header,
+// footer and providers live in the ROOT layout and persist across language
+// switches.
 
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { Providers } from "@/components/providers/Providers";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { fetchSettingsServer } from "@/lib/api";
-import { LANGS, siteUrl } from "@/lib/seo";
-import { getServerT } from "@/lib/i18n/server";
-import type { Lang } from "@/lib/types";
+import { LANGS } from "@/lib/seo";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
+// All three locales are enumerated, so unknown locale paths fall straight
+// to 404 instead of creating a dynamic fallback function.
+export const dynamicParams = false;
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
-  if (!LANGS.includes(lang as Lang)) return {};
-  const t = getServerT(lang as Lang);
-  return {
-    title: {
-      default: t("seo.home.title"),
-      template: "%s"
-    },
-    description: t("seo.home.description"),
-    metadataBase: new URL(siteUrl())
-  };
+export function generateStaticParams() {
+  return LANGS.map((lang) => ({ lang }));
 }
 
-export default async function LangLayout({
-  params,
-  children
-}: {
-  params: Promise<{ lang: string }>;
-  children: React.ReactNode;
-}) {
-  const { lang } = await params;
-  if (!LANGS.includes(lang as Lang)) notFound();
-
-  const settings = await fetchSettingsServer();
-
-  return (
-    <Providers lang={lang as Lang}>
-      <Header lang={lang as Lang} phone={settings.phone} />
-      <main className="min-h-screen">{children}</main>
-      <Footer lang={lang as Lang} settings={settings} />
-    </Providers>
-  );
+export default function LangLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }

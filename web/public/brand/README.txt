@@ -1,10 +1,6 @@
-Logo files
+Logo files (provided by the client)
 
-The client's official logo goes here. The frontend reads these files by
-name, so replacing them requires no code changes:
+  logo.png — transparent brand logo, used in header, footer and admin panel
+  icon.png — red square brand mark, used as favicon
 
-  logo.svg       — full wordmark for light backgrounds
-  logo-light.svg — full wordmark for dark backgrounds
-  icon.svg       — square mark, used in the header, footer and favicon
-
-Until the official files arrive, these are temporary placeholder marks.
+To update the brand: replace these two files, keeping the same names.

@@ -1,13 +1,13 @@
 // Terms of Service page — localized, with full SEO alternates.
 
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { TermsContent } from "@/components/terms/TermsContent";
 import { buildPageMetadata } from "@/lib/seo";
 import { getServerT } from "@/lib/i18n/server";
 import type { Lang } from "@/lib/types";
 
-export const runtime = "edge";
-export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
