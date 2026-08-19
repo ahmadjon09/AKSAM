@@ -31,7 +31,7 @@ export function Story({ lang }: { lang: Lang }) {
           </div>
           {/* Signature red frame offset behind the photo */}
           <div className="absolute -bottom-6 left-6 rounded-lg bg-ink px-6 py-4 text-white shadow-xl">
-            <p className="text-3xl font-extrabold leading-none">2020</p>
+            <p className="text-3xl font-extrabold leading-none">1991</p>
             <p className="mt-1 text-[11.5px] font-semibold uppercase tracking-[0.18em] text-white/60">{t("hero.eyebrow")}</p>
           </div>
         </Reveal>

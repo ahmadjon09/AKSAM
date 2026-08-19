@@ -280,9 +280,9 @@ export const DEMO_PRODUCTS: ProductDto[] = [
       en: "Strong, longitudinally ribbed elastic tape for apparel and industry."
     },
     description: {
-      uz: "Bo'ylama qovurg'ali to'qilgan elastik tasma - cho'zilishga chidamli, shaklini tez tiklaydi va chetlari yechilmaydi. Belbog', manjet va texnik maqsadlar uchun ideal. Kenglik, qattiqlik darajasi va rang bo'yicha sozlash mumkin. 2020-yildan beri O'zbekiston kiyim-kechak korxonalariga yetkazib beramiz.",
-      ru: "Тканая эластичная лента с продольным рубчиком - устойчива к растяжению, быстро восстанавливает форму, края не осыпаются. Идеальна для поясов, манжет и технических задач. Настраивается по ширине, степени жёсткости и цвету. С 2020 года поставляем швейным предприятиям Узбекистана.",
-      en: "Woven elastic tape with a longitudinal rib - stretch-resistant, recovers its shape quickly and the edges never fray. Ideal for waistbands, cuffs and technical applications. Customisable by width, firmness and colour. Supplying Uzbek garment manufacturers since 2020."
+      uz: "Bo'ylama qovurg'ali to'qilgan elastik tasma - cho'zilishga chidamli, shaklini tez tiklaydi va chetlari yechilmaydi. Belbog', manjet va texnik maqsadlar uchun ideal. Kenglik, qattiqlik darajasi va rang bo'yicha sozlash mumkin. 1991-yildan beri O'zbekiston kiyim-kechak korxonalariga yetkazib beramiz.",
+      ru: "Тканая эластичная лента с продольным рубчиком - устойчива к растяжению, быстро восстанавливает форму, края не осыпаются. Идеальна для поясов, манжет и технических задач. Настраивается по ширине, степени жёсткости и цвету. С 1991 года поставляем швейным предприятиям Узбекистана.",
+      en: "Woven elastic tape with a longitudinal rib - stretch-resistant, recovers its shape quickly and the edges never fray. Ideal for waistbands, cuffs and technical applications. Customisable by width, firmness and colour. Supplying Uzbek garment manufacturers since 1991."
     },
     metaTitle: {
       uz: "To'qilgan elastik tasma - AKSAM ishlab chiqarishi, Namangan",

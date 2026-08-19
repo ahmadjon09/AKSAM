@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "AKSAM - 2020-yildan beri Namanganda lentalar, elastik tasmalar, kiyim yorliqlari va brend etiketkalarini ishlab chiqaruvchi kompaniya. Sifatli lenta, rezina tasma va maxsus yorliqlar ishlab chiqarish.",
+    "AKSAM - 1991-yildan beri Namanganda lentalar, elastik tasmalar, kiyim yorliqlari va brend etiketkalarini ishlab chiqaruvchi kompaniya. Sifatli lenta, rezina tasma va maxsus yorliqlar ishlab chiqarish.",
 
   keywords: [
     "AKSAM",
