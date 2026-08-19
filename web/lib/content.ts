@@ -42,21 +42,21 @@ export function localized<T>(obj: Record<Lang, T>, lang: Lang): T {
 
 export const HERO_STATS: Record<Lang, Stat[]> = {
   uz: [
-    { value: "6+", label: "yillik tajriba" },
-    { value: "1200+", label: "bajarilgan buyurtma" },
-    { value: "46+", label: "doimiy mijoz" },
+    { value: "34+", label: "yillik tajriba" },
+    { value: "5200+", label: "bajarilgan buyurtma" },
+    { value: "180+", label: "doimiy mijoz" },
     { value: "99.8%", label: "sifat kafolati" }
   ],
   ru: [
-    { value: "6+", label: "лет опыта" },
-    { value: "1200+", label: "выполненных заказов" },
-    { value: "46+", label: "постоянных клиентов" },
+    { value: "34+", label: "лет опыта" },
+    { value: "5200+", label: "выполненных заказов" },
+    { value: "180+", label: "постоянных клиентов" },
     { value: "99.8%", label: "гарантия качества" }
   ],
   en: [
-    { value: "6+", label: "years of experience" },
-    { value: "1200+", label: "orders completed" },
-    { value: "46+", label: "regular clients" },
+    { value: "34+", label: "years of experience" },
+    { value: "5200+", label: "orders completed" },
+    { value: "180+", label: "regular clients" },
     { value: "99.8%", label: "quality guarantee" }
   ]
 };
