@@ -4,7 +4,7 @@
 "use client";
 
 import Image, { type ImageProps } from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface ImageWithLoaderProps extends Omit<ImageProps, "onLoad" | "placeholder"> {
@@ -23,7 +23,7 @@ export function ImageWithLoader({
 }: ImageWithLoaderProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const imgRef = useState<HTMLImageElement | null>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,12 +36,12 @@ export function ImageWithLoader({
       { rootMargin: "200px" }
     );
 
-    if (imgRef[0]) {
-      observer.observe(imgRef[0]);
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
 
     return () => observer.disconnect();
-  }, [imgRef]);
+  }, []);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -56,7 +56,7 @@ export function ImageWithLoader({
       )}
       {isVisible && (
         <Image
-          ref={imgRef as React.RefObject<HTMLImageElement>}
+          ref={imgRef}
           src={src}
           alt={alt}
           fill={fill}
