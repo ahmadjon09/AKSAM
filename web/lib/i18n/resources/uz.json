@@ -27,7 +27,7 @@
     "no": "Yo'q"
   },
   "hero": {
-    "eyebrow": "Ishlab chiqarish - 2020-yildan beri",
+    "eyebrow": "Ishlab chiqarish - 1991-yildan beri",
     "titleLine1": "To'qilgan sifat,",
     "titleAccent": "har bir metrda",
     "subtitle": "Namangandagi ishlab chiqarish majmuamizda lentalar, elastik tasmalar va brend yorliqlarini Yevropa uskunalarida, ISO nazorati ostida ishlab chiqaramiz.",
@@ -36,7 +36,7 @@
     "scroll": "Pastga suring",
     "stats": [
       {
-        "value": "6+",
+        "value": "34+",
         "label": "yillik tajriba"
       },
       {
@@ -78,7 +78,7 @@
   "story": {
     "eyebrow": "Brend haqida",
     "title": "Namangan - sifatning manzili",
-    "p1": "AKSAM 2020-yilda kichik to'quv ustaxonasi sifatida ish boshlagan. Bugun bu - zamonaviy Yevropa uskunalari bilan jihozlangan, butun O'zbekiston bo'ylab kiyim-kechak korxonalari va brendlarini ta'minlaydigan ishlab chiqarish majmuasi.",
+    "p1": "AKSAM 1991-yilda kichik to'quv ustaxonasi sifatida ish boshlagan. Bugun bu - zamonaviy Yevropa uskunalari bilan jihozlangan, butun O'zbekiston bo'ylab kiyim-kechak korxonalari va brendlarini ta'minlaydigan ishlab chiqarish majmuasi.",
     "p2": "Tamoyilimiz oddiy: har bir partiya ISO standartlari bo'yicha nazorat qilinadi, har bir buyurtma o'z vaqtida bajariladi. Shuning uchun mijozlarning 99,8 foizi bizga qayta-qayta murojaat qiladi.",
     "link": "Kompaniya haqida batafsil"
   },
@@ -212,7 +212,7 @@
   "about": {
     "heroEyebrow": "Kompaniya haqida",
     "heroTitle": "Sifat - bizning birinchi tilimiz",
-    "heroText": "AKSAM 2020-yildan buyon O'zbekiston kiyim-kechak sanoatini sifatli lentalar, elastik tasmalar va yorliqlar bilan ta'minlab kelmoqda.",
+    "heroText": "AKSAM 1991-yildan buyon O'zbekiston kiyim-kechak sanoatini sifatli lentalar, elastik tasmalar va yorliqlar bilan ta'minlab kelmoqda.",
     "valuesEyebrow": "Qadriyatlar",
     "valuesTitle": "Bizni biz qiladigan tamoyillar",
     "values": [
@@ -319,32 +319,32 @@
   },
   "seo": {
     "home": {
-      "title": "AKSAM - lentalar, elastik tasmalar va yorliqlar ishlab chiqaruvchisi | Namangan, O'zbekiston",
-      "description": "AKSAM - 2020-yildan beri Namanganda lentalar, elastik tasmalar va brend yorliqlarini ishlab chiqaruvchi kompaniya. Yevropa uskunalari, ISO sifat nazorati, butun O'zbekiston bo'ylab yetkazib berish."
+      "title": "AKSAM - lentalar, elastik tasmalar, etiketkalar va yorliqlar ishlab chiqaruvchisi | Namangan, O'zbekiston",
+      "description": "AKSAM - 1991-yildan beri Namanganda atlas lentalar, rep lentalar (lenta), jakkard lentalar, elastik tasmalar, to'qilgan etiketkalar va brend yorliqlarini ishlab chiqaruvchi kompaniya. Yevropa uskunalari, ISO sifat nazorati, Pantone ranglar, butun O'zbekiston bo'ylab yetkazib berish."
     },
     "products": {
-      "title": "Mahsulotlar katalogi - lentalar, elastik tasmalar, yorliqlar | AKSAM",
-      "description": "AKSAM mahsulotlari: atlas, rep, jakkard va organza lentalar, to'qilgan va trikotaj elastik tasmalar, to'qilgan va osma yorliqlar. Individual buyurtma, 5–20 ish kuni."
+      "title": "Mahsulotlar katalogi - lentalar, elastik tasmalar, etiketkalar, yorliqlar | AKSAM",
+      "description": "AKSAM mahsulotlari: atlas, rep, jakkard va organza lentalar, to'qilgan va trikotaj elastik tasmalar, to'qilgan etiketkalar va osma yorliqlar. Individual buyurtma, 5–20 ish kuni, Pantone ranglar. Kiyim-kechak, tikuvchilik va brendlar uchun."
     },
     "about": {
-      "title": "Kompaniya haqida - AKSAM, Namangan",
-      "description": "AKSAM tarixi, qadriyatlari va jamoasi. 2020-yildan beri O'zbekiston bozorida - Yevropa uskunalari va ISO sifat nazorati bilan."
+      "title": "Kompaniya haqida - AKSAM, Namangan | Lentalar va etiketkalar ishlab chiqarish",
+      "description": "AKSAM tarixi, qadriyatlari va jamoasi. 1991-yildan beri O'zbekiston bozorida - Yevropa uskunalari va ISO sifat nazorati bilan lentalar, elastik tasmalar va etiketkalar ishlab chiqaramiz."
     },
     "contact": {
-      "title": "Aloqa - AKSAM, Namangan",
-      "description": "AKSAM bilan bog'laning: telefon, Telegram, elektron pochta yoki sayt orqali ariza. Manzil: Namangan sh., Yangi Namangan tumani."
+      "title": "Aloqa - AKSAM, Namangan | Lentalar va etiketkalar buyurtma",
+      "description": "AKSAM bilan bog'laning: telefon, Telegram, elektron pochta yoki sayt orqali ariza. Lentalar, elastik tasmalar va etiketkalar buyurtma qilish. Manzil: Namangan sh., Yangi Namangan tumani."
     },
     "locations": {
-      "title": "Manzil va yetkazib berish - AKSAM",
-      "description": "AKSAM ishlab chiqarish majmuasi manzili: Namangan sh., Yangi Namangan tumani, Go'zal ko'chasi, 3-uy. Butun O'zbekiston bo'ylab yetkazib berish."
+      "title": "Manzil va yetkazib berish - AKSAM | Lentalar va etiketkalar",
+      "description": "AKSAM ishlab chiqarish majmuasi manzili: Namangan sh., Yangi Namangan tumani, Go'zal ko'chasi, 3-uy. Lentalar, elastik tasmalar va etiketkalarni butun O'zbekiston bo'ylab yetkazib berish."
     },
     "default": {
-      "title": "AKSAM - lentalar, elastik tasmalar va yorliqlar | Namangan, O'zbekiston",
-      "description": "AKSAM ishlab chiqarish majmuasi - Namangandan butun O'zbekistonga sifatli lentalar, elastik tasmalar va yorliqlar."
+      "title": "AKSAM - lentalar, elastik tasmalar, etiketkalar va yorliqlar | Namangan, O'zbekiston",
+      "description": "AKSAM ishlab chiqarish majmuasi - Namangandan butun O'zbekistonga sifatli lentalar, elastik tasmalar, etiketkalar va yorliqlar. Atlas, rep, jakkard mahsulotlar."
     },
     "terms": {
-      "title": "Xizmat ko'rsatish shartlari - AKSAM",
-      "description": "AKSAM veb-saytidan foydalanish va buyurtma berish shartlari: buyurtma tartibi, narxlar, yetkazib berish, maxfiylik va javobgarlik."
+      "title": "Xizmat ko'rsatish shartlari - AKSAM | Lentalar va etiketkalar",
+      "description": "AKSAM veb-saytidan foydalanish va buyurtma berish shartlari: lentalar, etiketkalar va yorliqlar buyurtma tartibi, narxlar, yetkazib berish, maxfiylik va javobgarlik."
     }
   },
   "faq": {

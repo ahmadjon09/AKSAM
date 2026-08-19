@@ -27,7 +27,7 @@
     "no": "No"
   },
   "hero": {
-    "eyebrow": "Manufacturing since 2020",
+    "eyebrow": "Manufacturing since 1991",
     "titleLine1": "Quality woven into",
     "titleAccent": "every metre",
     "subtitle": "At our production complex in Namangan we manufacture ribbons, elastic tapes and brand labels on European equipment under ISO quality control.",
@@ -36,7 +36,7 @@
     "scroll": "Scroll down",
     "stats": [
       {
-        "value": "6+",
+        "value": "34+",
         "label": "years of experience"
       },
       {
@@ -78,7 +78,7 @@
   "story": {
     "eyebrow": "About the brand",
     "title": "Namangan - the address of quality",
-    "p1": "AKSAM began in 2020 as a small weaving workshop. Today it is a production complex with modern European equipment, supplying garment manufacturers and brands across Uzbekistan.",
+    "p1": "AKSAM began in 1991 as a small weaving workshop. Today it is a production complex with modern European equipment, supplying garment manufacturers and brands across Uzbekistan.",
     "p2": "Our principle is simple: every batch passes ISO-standard inspection and every order ships on time. That is why 99.8% of our clients come back.",
     "link": "More about the company"
   },
@@ -212,7 +212,7 @@
   "about": {
     "heroEyebrow": "About the company",
     "heroTitle": "Quality is our first language",
-    "heroText": "Since 2020, AKSAM has supplied Uzbekistan's garment industry with quality ribbons, elastic tapes and labels.",
+    "heroText": "Since 1991, AKSAM has supplied Uzbekistan's garment industry with quality ribbons, elastic tapes and labels.",
     "valuesEyebrow": "Values",
     "valuesTitle": "The principles that make us who we are",
     "values": [
@@ -319,32 +319,32 @@
   },
   "seo": {
     "home": {
-      "title": "AKSAM - manufacturer of ribbons, elastic tapes and labels | Namangan, Uzbekistan",
-      "description": "AKSAM has manufactured ribbons, elastic tapes and brand labels in Namangan since 2020. European equipment, ISO quality control, delivery across Uzbekistan."
+      "title": "AKSAM - manufacturer of ribbons, labels, elastic tapes and tags | Namangan, Uzbekistan",
+      "description": "AKSAM has manufactured satin, grosgrain (ribbons), jacquard ribbons, labels, elastic tapes and brand tags in Namangan since 1991. European equipment, ISO quality control, Pantone colours, delivery across Uzbekistan."
     },
     "products": {
-      "title": "Product catalogue - ribbons, elastic tapes, labels | AKSAM",
-      "description": "AKSAM products: satin, grosgrain, jacquard and organza ribbons, woven and knitted elastic tapes, woven and hang tags. Custom orders, 5–20 working days."
+      "title": "Product catalogue - ribbons, labels, elastic tapes, tags | AKSAM",
+      "description": "AKSAM products: satin, grosgrain, jacquard and organza ribbons, woven and knitted elastic tapes, woven labels and hang tags. Custom orders, 5–20 working days, Pantone colours. For garment industry and clothing brands."
     },
     "about": {
-      "title": "About the company - AKSAM, Namangan",
-      "description": "The story, values and team of AKSAM. On the Uzbek market since 2020 - European equipment and ISO quality control."
+      "title": "About the company - AKSAM, Namangan | Ribbon and label manufacturing",
+      "description": "The story, values and team of AKSAM. On the Uzbek market since 1991 - European equipment and ISO quality control. We manufacture ribbons, elastic tapes and labels."
     },
     "contact": {
-      "title": "Contact - AKSAM, Namangan",
-      "description": "Get in touch with AKSAM: phone, Telegram, email or a website request. Address: Namangan, Yangi Namangan district."
+      "title": "Contact - AKSAM, Namangan | Order ribbons and labels",
+      "description": "Get in touch with AKSAM: phone, Telegram, email or a website request. Order ribbons, elastic tapes and labels. Address: Namangan, Yangi Namangan district."
     },
     "locations": {
-      "title": "Location and delivery - AKSAM",
-      "description": "Address of the AKSAM production complex: Namangan, Yangi Namangan district, Guzal street, 3. Delivery across Uzbekistan."
+      "title": "Location and delivery - AKSAM | Ribbons and labels",
+      "description": "Address of the AKSAM production complex: Namangan, Yangi Namangan district, Guzal street, 3. Delivery of ribbons, elastic tapes and labels across Uzbekistan."
     },
     "default": {
-      "title": "AKSAM - ribbons, elastic tapes and labels | Namangan, Uzbekistan",
-      "description": "The AKSAM production complex - quality ribbons, elastic tapes and labels from Namangan to all of Uzbekistan."
+      "title": "AKSAM - ribbons, labels, elastic tapes and tags | Namangan, Uzbekistan",
+      "description": "The AKSAM production complex - quality ribbons, labels, elastic tapes and tags from Namangan to all of Uzbekistan. Satin, grosgrain, jacquard products."
     },
     "terms": {
-      "title": "Terms of Service - AKSAM",
-      "description": "Terms for using the AKSAM website and placing orders: order process, pricing, delivery, privacy and liability."
+      "title": "Terms of Service - AKSAM | Ribbons and labels",
+      "description": "Terms for using the AKSAM website and placing orders: order process for ribbons, labels and tags, pricing, delivery, privacy and liability."
     }
   },
   "faq": {
