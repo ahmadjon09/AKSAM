@@ -1,1 +1,91 @@
-Nothing should be ignored based on the provided file changes. The only modified file is a TypeScript React component file (`web/components/ui/ImageWithLoader.tsx`), which is source code and should not be ignored.
+```
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+target/
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.ENV
+.python-version
+
+# Logs
+*.log
+
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Database
+*.db
+*.db-journal
+
+# Prisma
+prisma/migrations/
+prisma/schema.prisma.bak
+
+# TypeScript/JavaScript
+*.tsbuildinfo
+.next/
+.nuxt/
+public/build/
+
+# Testing
+.mypy_cache/
+.pytest_cache/
+.jest/
+coverage/
+
+# Package manager
+.yarn/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compression
+*.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.rar
+*.7z
+```
